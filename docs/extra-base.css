@@ -2,11 +2,6 @@
     --md-primary-fg-color: hsl(165, 80%, 40%);
 }
 
-:root {
-    --em-vers: "24.0.11";
-    --em-time: "202409151223";
-}
-
 [data-md-color-scheme="slate"] {
     --md-hue: 232;
     --md-default-bg-color: hsla(var(--md-hue),15%,18%,1);
@@ -58,14 +53,6 @@ a:not([class]) {
 
 .md-nav--primary {
     font-size: 0.8rem;
-}
-
-div.md-search__inner::after {
-    content: 'version 'var(--em-vers)' \2014  [\2009 'var(--em-time)'\2009]';
-    font-size: 0.6rem;
-    position: absolute;
-    top: 48px;
-    left: 24px;
 }
 
 .md-nav__title[for="__toc"] {

@@ -8,11 +8,6 @@
     --md-typeset-a-color:  hsl(175, 80%, 40%) !important;
 }
 
-:root {
-    --em-vers: "26.2.1";
-    --em-time: "202502201834";
-}
-
 [data-md-color-scheme="slate"] {
     --md-hue: 232;
     --md-default-bg-color: hsla(var(--md-hue),15%,15%,1);
@@ -97,20 +92,6 @@ nav.md-header__inner {
 
 div.md-header__title {
     margin-left: 18px !important;
-}
-
-div.md-search {
-    position: relative;
-    top:  36px;
-    left: 2px;
-}
-
-div.md-search__inner::after {
-    content: 'Version 'var(--em-vers)' \2014  [\2009 'var(--em-time)'\2009]';
-    font-size: 0.6rem;
-    position: absolute;
-    top: -26px;
-    left: 45px;
 }
 
 .md-nav__title[for="__toc"] {

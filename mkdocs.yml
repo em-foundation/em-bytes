@@ -67,6 +67,3 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/em-foundation
 
-nav:
-  - Home: 
-    - index.md
