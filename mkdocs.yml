@@ -1,0 +1,72 @@
+site_name: EM&bull;Bytes
+copyright: Copyright &copy; 2023 &ndash; The EM Foundation
+extra_css: [extra.css]
+extra_javascript: [extra.js]
+
+theme:
+  name: material
+  favicon: assets/favicon.png
+  features:
+    #    - navigation.expand
+    #    - navigation.footer
+    - navigation.indexes
+    #    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+  #    - navigation.tracking
+  font:
+    text: Quicksand
+  icon:
+    annotation: material/chevron-right-circle
+  logo: assets/logo12.png
+  palette:
+    accent: light blue
+    scheme: slate
+    primary: custom
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      ##      auto_title: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+
+plugins:
+  - emdown
+  - glightbox
+  - open-in-new-tab
+  - search
+
+extra:
+  analytics:
+    provider: google
+    property: G-B2D564DJH3
+
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/the-em-foundation/about/?viewAsMember=true
+    - icon: fontawesome/brands/github
+      link: https://github.com/em-foundation
+
+nav:
+  - Home: 
+    - index.md

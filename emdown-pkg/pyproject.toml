@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emdown"
+version = "0.0.1"
+dependencies = ["Markdown"]
+
+[project.entry-points."mkdocs.plugins"]
+emdown = "emdown.emdown:EmdownPlugin"

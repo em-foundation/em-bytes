@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emslexer"
+version = "0.0.1"
+dependencies = ["Pygments"]
+
+[project.entry-points."pygments.lexers"]
+ems = "emslexer.emslexer:EmsLexer"

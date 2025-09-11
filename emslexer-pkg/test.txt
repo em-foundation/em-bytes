@@ -1,0 +1,46 @@
+// export namespace em$meta {
+//     export function em$construct() {
+//         AppTicker.$$ = TickerMgr#u.em$meta.create#f()
+//         SysTicker.$$ = TickerMgr#u.em$meta.create#f()
+//         PrintTicker.$$ = TickerMgr#u.em$meta.create#f()
+//     }
+// }
+// 
+export function em$run() {
+    printf`\nEx01_TickerP program startup`()
+    startLedTickers#f()
+    startPrintTicker#f()
+    startButton#f()
+    printStatus#f()
+    FiberMgr#u.run#f()
+}
+
+function appTickCb#f() {
+    appCount += 1
+    em.$['%%c']
+    AppLed.$$.wink(10)
+}
+
+function countError#f(count: u32, expectedCount: u32): bool_t {
+    return (count < expectedCount || count > expectedCount + 1)
+}
+
+function onButtonPressed#f() {
+    if (AppBut.$$.isPressed()) {
+        // a long press (press time > maxPressTimeMs)
+        printf`Long button press: Stopping app/sys tickers\n`()
+        dividedBy = 0
+        stopLedTickers#f()
+        lastAppCount = 0
+        lastSysCount = 0
+    } else {
+        // a short press (minPressTimeMs < press time < maxPressTimeMs)
+        dividedBy = (dividedBy >= maxDividedBy || dividedBy < 1) ? 1 : dividedBy * 2
+        printf`Short button press: Setting rate to %dx\n`(dividedBy)
+        startLedTickers#f()
+        printStatus#f()
+    }
+    printsAfterRateChange = 0
+}
+
+

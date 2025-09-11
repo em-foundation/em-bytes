@@ -1,0 +1,7 @@
+.history/
+build/
+/docs/shelf/
+pyenv/
+**/dist
+**/*.egg-info
+.extra/
