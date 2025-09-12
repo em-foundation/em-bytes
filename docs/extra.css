@@ -625,3 +625,51 @@ span.em-content-unit-link::before {
     margin-right: 4px;
 }
 */
+
+/* EM-Bytes adjustments */
+
+h1 {display: none}
+.md-typeset h2 {margin-bottom: 1.5em !important;}
+.md-typeset h3 {font-size: 180% }
+
+/*
+:root {
+    --content-max: 35rem;
+    --toc-width: 26rem;
+    --grid-gap: 2rem;
+}
+
+h1 {display: none}
+.md-typeset h2 {margin-bottom: 1.5em !important;}
+.md-typeset h3 {font-size: 180% }
+.md-sidebar--primary {display: none; }
+.md-sidebar--primary .md-sidebar__scrollwrap {display: none}
+.md-sidebar__scrollwrap {display: none}
+.md-sidebar--secondary {display: block !important;}
+
+@media (min-width: 60em) {
+    .md-main__inner {
+        grid-template-columns: calc(var(--toc-width) + var(--grid-gap)) minmax(0, var(--content-max)) var(--toc-width);
+        max-width: calc((var(--toc-width) + var(--grid-gap)) + var(--content-max) + var(--toc-width) + var(--grid-gap));
+        column-gap: var(--grid-gap, 2rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.md-content, .md-content__inner, .md-typeset { max-width: var(--content-max); margin: 0 auto; }
+
+.md-sidebar--secondary{ width: var(--toc-width); }
+.md-nav--secondary .md-nav__title{
+    visibility: hidden; height: 0;
+}
+.md-nav--secondary .md-nav__title::after{
+    content: "Articles"; visibility: visible; display: block; margin-top: .25rem;
+     
+}
+.md-nav--secondary .md-nav__link{
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.md-nav--secondary .md-nav{ font-size: .95rem; }
+
+*/
