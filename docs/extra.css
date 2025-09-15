@@ -382,6 +382,7 @@ span.em-screen {
     /*--md-admonition-icon--tools: url(assets/calendar.svg); */
     --md-admonition-icon--em: url(assets/file_type_emunit.svg);
     --md-admonition-icon--engr: url(assets/material-engr.svg);
+    --md-admonition-icon--eighth: url(assets/eighth.png);
     --md-admonition-icon--tools: url(assets/material-tools.svg);
     --md-admonition-icon--ts: url(assets/ts-logo.png);
     --md-admonition-icon--zig: url(assets/zig-mark.svg);
@@ -432,6 +433,21 @@ span.em-screen {
         mask-image: var(--md-admonition-icon--em);
 }
 
+.md-typeset .admonition.eighth,
+.md-typeset details.eighth {
+    border-color: hsl(175, 100%, 60%);
+}
+.md-typeset .em > .admonition-title,
+.md-typeset .em > summary {
+    background-color: hsla(175, 100%, 75%, 0.1)
+}
+.md-typeset .em > .admonition-title::before,
+.md-typeset .em > summary::before {
+    background-color: hsl(175, 100%, 60%);
+    -webkit-mask-image: var(--md-admonition-icon--eighth);
+        mask-image: var(--md-admonition-icon--eighth);
+}
+
 .md-typeset .admonition.tools,
 .md-typeset details.tools {
     border-color: hsl(30, 100%, 60%);
@@ -478,6 +494,24 @@ span.em-screen {
     -webkit-mask-image: var(--md-admonition-icon--zig);
         mask-image: var(--md-admonition-icon--zig);
 }
+
+
+.md-typeset .admonition.eighth,
+.md-typeset details.eighth {
+    border-color: hsl(175, 60%, 60%);
+}
+.md-typeset .eighth > .admonition-title,
+.md-typeset .eighth > summary {
+    background-color: hsla(156, 100%, 70%, 0.1)
+}
+.md-typeset .eighth > .admonition-title::before,
+.md-typeset .eighth > summary::before {
+    background-color: hsl(175, 60%, 60%);
+    -webkit-mask-image: var(--md-admonition-icon--eighth);
+        mask-image: var(--md-admonition-icon--eighth);
+}
+
+
 
 
 
@@ -627,10 +661,14 @@ span.em-content-unit-link::before {
 */
 
 /* EM-Bytes adjustments */
-
 h1 {display: none}
 .md-typeset h2 {margin-bottom: 1.5em !important;}
-.md-typeset h3 {font-size: 180% }
+.md-typeset h3 {font-size: 1.8em; margin-top: 0; }
+.md-sidebar--primary .md-sidebar__scrollwrap {display: none}
+.md-nav--secondary .md-nav__link{
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
 
 /*
 :root {
@@ -639,7 +677,6 @@ h1 {display: none}
     --grid-gap: 2rem;
 }
 
-h1 {display: none}
 .md-typeset h2 {margin-bottom: 1.5em !important;}
 .md-typeset h3 {font-size: 180% }
 .md-sidebar--primary {display: none; }

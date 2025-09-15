@@ -7,7 +7,7 @@ theme:
   name: material
   favicon: assets/favicon.png
   features:
-    - toc.follow
+    #- toc.follow
     #    - navigation.expand
     #    - navigation.footer
     #- navigation.indexes
@@ -51,7 +51,7 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tilde
   - toc:
-      permalink: true
+      #permalink: true
       toc_depth: 2
 
 plugins:
