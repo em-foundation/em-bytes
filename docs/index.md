@@ -1,4 +1,6 @@
-# EM&bull;Bytes
+<script src="extra-home.js" defer></script>
+
+# EM&bull;Bytes &ndash; Home
 
 ### Bite-sized posts on "tiny-code for tiny-chips"
 
@@ -22,10 +24,15 @@ With so much technical debt taken on by today's legacy embedded software, next-g
 
 The articles which follow touch on a range of topics under our "tiny-code for tiny-chips" umbrella &ndash; often highlighting initiatives by the **The EM Foundation** to drive change in how we think about resource-constrained embedded systems.
 
-We'll keep the articles short &ndash; skim them in a minute, digest them in under ten....&thinsp;  And though each post will invariably cover technical material, we'll keep the content high-level &ndash; flying at 10,000 feet, but with links to other resources for those wishing to engage on the ground. 
+We'll keep the articles short &ndash; skim them in a minute, digest them in under ten....&thinsp;  And though each post will invariably cover technical material, we'll keep the content high-level &ndash; flying at 10,000 feet, but with links to other resources for those wishing to deep-dive on the ground. 
 
 
 ## Benchmark[et]ing ultra-low-power
+
+Vendor data sheets might specify that an ultra-low-power MCU draws (say) **700&thinsp;nA @ 3&thinsp;V** when in its "deep-sleep" mode.  Very nice – but until we factor in our application workload, we have no way to truly assess the impact of these MCU specs on overall energy efficiency.
+
+{[sp,em-float-right][continue reading....](articles/001-Benchmark.md)}
+<br>
 
 ## Introducing BlueJoule&trade; &ndash; showcasing EM&bull;Scope
 
