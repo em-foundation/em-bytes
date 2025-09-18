@@ -116,6 +116,10 @@ div.md-tooltip__inner {
     font-size: 0.8rem;
 }
 
+.md-typeset .admonition {
+    font-size: 0.77rem !important;
+}
+
 .md-typeset p code {
     background-color: transparent;
     font-size: 85%;
@@ -662,12 +666,19 @@ span.em-content-unit-link::before {
 
 /* EM-Bytes adjustments */
 h1 {display: none}
-.md-typeset h2 {margin-bottom: 1.5em !important;}
+.md-typeset h2 {margin-bottom: 1em !important;}
 .md-typeset h3 {font-size: 1.8em; margin-top: 0; }
 .md-sidebar--primary .md-sidebar__scrollwrap {display: none}
 .md-nav--secondary .md-nav__link{
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+
+.article-meta {
+    margin: 0 !important;
+    font-size: .7rem;
+    opacity: .8;
+}
+
 
 
 /*

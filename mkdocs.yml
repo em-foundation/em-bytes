@@ -45,7 +45,10 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.details
   - pymdownx.snippets:
+      base_path:
+        - docs
       check_paths: true
+      restrict_base_path: true
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
