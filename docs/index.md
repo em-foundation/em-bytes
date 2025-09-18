@@ -1,6 +1,6 @@
-<script src="extra-home.js" defer></script>
-
 # EM&bull;Bytes &ndash; Home
+
+<script src="extra-home.js" defer></script>
 
 ### Bite-sized posts on "tiny-code for tiny-chips"
 
