@@ -1,4 +1,4 @@
-# EM&bull;Bytes &ndash; Benchmark[et]ing ultra-low-power
+# EM&bull;Bytes &thinsp;**&#183;**&thinsp; Benchmark[et]ing ultra-low-power
 
 
 <!-- --8<-- [start:excerpt] -->

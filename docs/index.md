@@ -1,4 +1,4 @@
-# EM&bull;Bytes &ndash; Home
+# EM&bull;Bytes &thinsp;**&#183;**&thinsp; Home
 
 <script src="extra-home.js" defer></script>
 
@@ -12,7 +12,6 @@ With so much technical debt taken on by today's legacy embedded software, next-g
 
 <!-- By rethinking software development for resource-constrained hardware platforms, we look to enable a new breed of embedded applications targeting minimalistic MCUs &ndash; systems in which every byte of memory and &mu;Joule of energy impacts their cost and viability.
 -->
-
 
 !!! eighth "On a personal note"
 
@@ -35,5 +34,5 @@ We'll keep the articles short &ndash; skim them in a minute, digest them in unde
 {[sp,em-float-right][continue reading....](articles/001-Benchmark.md)}
 <br>
 
-## Introducing BlueJoule&trade; &ndash; showcasing EM&bull;Scope
+## The BlueJoule&trade; benchmark
 
