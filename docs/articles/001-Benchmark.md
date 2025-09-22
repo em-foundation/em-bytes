@@ -1,4 +1,4 @@
-# EM&bull;Bytes &thinsp;**&#183;**&thinsp; Benchmark[et]ing ultra-low-power
+# EM&bull;Bytes &thinsp;**&#183;**&thinsp; Quantifying energy efficiency with EM&bull;Scope
 
 
 <!-- --8<-- [start:excerpt] -->
@@ -34,9 +34,21 @@ In practice, steps :two: and :four: involve MCU peripherals performing I/O opera
 Once the MCU returns to its "active" mode &ndash; and the application finally does some useful work &ndash; the impact of software on total power consumption boils down to the _number_&thinsp; of instructions the CPU must fetch and execute.&nbsp; But how can we best quantify this impact&thinsp;???
 
 !!! bulb "**Joules**, not **Watts**"
-    As software practitioners, we need focus on total power consumption over a period of time.&thinsp; Only then can we begin to appreciate the oversized :wink: impact our code can have on overall energy efficiency.
+    As software practitioners, we need focus on total power consumption over a period of time.&thinsp; Only then can we begin to appreciate the oversized :wink: impact our code might have on overall energy efficiency.
 
 ## Profiling energy with **EM&bull;Scope**
+
+To bring energy efficiency into the foreground, we've introduced **EM&bull;Scope** &ndash; a tool used to capture, analyze, display, and deliver real-time profiles of power-consumption.
+
+Measuring target embedded systems performing typical periodic functions, **EM&bull;Scope** offers insights to developers and integrators alike not found in the MCU data sheet &ndash; by adding the dimension of _time_&thinsp; to the equation.
+
+!!! eighth "On a personal note"
+    Back in the day, I never really worried about _minimizing_&thinsp; system power consumption when developing embedded application software.&thinsp; Instead, we fixated on _maximizing_&thinsp; processor utilization &ndash; using every available MIP to continuously perform a multitude of real-time tasks.
+
+    In my mind, the **Texas Instruments MSP430** (announced in the 1990s) set the performance standard for the _ultra-low-power_&thinsp; microcontroller as we know it today.&thinsp; If nothing else, the MSP430 stands alone as the first MCU to use items from your [fridge](https://www.youtube.com/watch?v=nPZISRQAQpw) as a power source.
+
+    As a software developer, the rules of the game have now changed &ndash; to one in which "doing nothing" for the longest possible time _maximizes_ overall energy efficiency.&thinsp; Yes, we still want to execute code as quickly as possible &ndash; so we can enjoy a "deep-sleep" that much sooner.
+
 
 ## Quantifying energy efficiency
 
