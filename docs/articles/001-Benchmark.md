@@ -49,6 +49,13 @@ Measuring target embedded systems performing typical periodic functions, **EM&bu
 
     As a software developer, the rules of the game have now changed &ndash; to one in which "doing nothing" for the longest possible time _maximizes_ overall energy efficiency.&thinsp; Yes, we still want to execute code as quickly as possible &ndash; so we can enjoy a "deep-sleep" that much sooner.
 
+**EM&bull;Scope** captures real-time information via a hardware _power analyzer_&thinsp; connected to your target MCU board as well as your host PC:
+
+<figure markdown id="fig1">
+![Image info](/assets/fig-001-1.png)
+<figcaption>EM&bull;Scope Configuration 
+</figure>
+
 
 ## Quantifying energy efficiency
 
