@@ -53,9 +53,23 @@ Measuring target embedded systems performing typical periodic functions, **EM&bu
 
 <figure markdown id="fig1">
 ![Image info](/assets/fig-001-1.png)
-<figcaption>EM&bull;Scope Configuration 
+<figcaption>EM&bull;Scope Hardware Configuration 
 </figure>
 
+At present, the **EM&bull;Scope** tool supports two different analyzers &ndash; each used to record current consumption in real-time while also sourcing power to your target board:
+
+:blue_square: &ensp; **Joulescope** [JS220](https://www.joulescope.com/products/js220-joulescope-precision-energy-analyzer), a high-precision analyzer that belongs in every hardware lab
+
+:blue_square: &ensp; **Nordic** [PPK2](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2), an entry-level analyzer that fits any engineer's personal budget
+
+To normalize measurement, **EM&bull;Scope** presumes your target board will repeatedly perform a _single_&thinsp; application task of interest &ndash; entering deep-sleep mode when complete, and awakening one-second later for the next iteration.
+
+!!! abstract "Breaking the problem down"
+    While embedded applications typically perform _multiple_&thinsp; tasks (sensing, analyzing, logging, transmitting) at a variety of rates, measuring the energy consumption of each task in isolation &ndash; akin to unit-testing &ndash; helps us construct an application-level power-profile
+
+    Knowing the 1&thinsp;Hz energy consumption of each task [&thinsp;**&mu;J/s**&thinsp;], we can extrapolate to other rates of activity as well as combine results to characterize the application as a whole.&thinsp; Indi&shy;vidual tasks, while active less than 1% of the time, will often consume over 90% of the **&mu;J/s**.
+
+Since periodic activity occurs once per-second, recording for as little as 10–15&thinsp;seconds should provide a reasonable raw sample set for further analysis.&thinsp; Often an iterative process to finalize results, **EM&bull;Scope** can generate interactive plots along the way as a visual aid:
 
 ## Quantifying energy efficiency
 
