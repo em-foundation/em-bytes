@@ -106,14 +106,13 @@ Knowing **J/day**, we'll calculate our final **EM&bull;erald** score using a con
 Returning to our example:&thinsp; BLE advertising at a one-second rate scores **27.30 EM&bull;eralds**; BLE advertising at a ten-second rate scores **172.31 EM&bull;eralds**.&thinsp; As the duration of the period further increases, our BLE advertising score asymptotically approaches **~420 EM&bull;eralds**.
 
 This particular example uses an MCU(1) which features extremely low current consumption when in deep-sleep.&thinsp; While by no means the winner in a 1&thinsp;Hz race, this chip pulls away from the competitition(2) once we throttle back to (arguably) a more realistic rate of activity.
-
-!!! bulb "Five years on a coin-cell...."
-    Foo
-
 { .annotate }
 
 1. Texas Instruments [CC2340R5](https://www.ti.com/product/CC2340R5)
 2. Nordic [nRF54L15](https://www.nordicsemi.com/Products/nRF54L15),&thinsp; Silicon Labs [ERF32BG22E](https://www.silabs.com/wireless/bluetooth/efr32bg22-series-2-socs)
+
+!!! bulb "&ldquo;five years on a coin-cell&rdquo; &thinsp;&equiv;&thinsp; 60 **EM&bull;eralds**"
+    To many, the _gold standard_&thinsp; for any ultra-low-power embedded system....&thinsp; But even if your application has different requirements for longevity and employs different sources of power, **EM&bull;Scope** helps developers continually mine their target system for **_more_&thinsp; EM&bull;eralds**.
 
 
 ## Learning more about **EM&bull;Scope**
