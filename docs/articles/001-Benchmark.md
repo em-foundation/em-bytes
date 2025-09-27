@@ -86,4 +86,35 @@ Though not obvious, the trio of 300&thinsp;ms radio transmissions drawing 18&thi
 
 ## Quantifying energy efficiency
 
+In the spirit of [**CoreMark**](https://www.eembc.org/coremark/)&thinsp; (used for comparing CPU performance)&thinsp; **EM&bull;Scope** introduces a new single-score metric for quantifying energy efficiency &ndash; the **EM&bull;erald**.&thinsp; Like other bench&shy;mark scores, "higher is better" &ndash; more **EM&bull;eralds** means less power and greater efficiency.
+
+Starting with a baseline measurement of **&mu;J/s** using (say) ten 1&thinsp;Hz _wakeup · execute · sleep_ cycles, we can easily calculate **J/day**.&thinsp; In our earlier example, **EM&bull;Scope** determined that a complete one-second cycle consumed 33.913&thinsp;&mu;Joules which scales to 2.930&thinsp;Joules per day.
+
+By measuring power consumption when in deep-sleep, **EM&bull;Scope** can calculate **J/day** for periodic activity occuring at _any_&thinsp; rate.&thinsp; If the BLE advertising event seen earlier happened once every ten seconds, this task would now require only 0.463&thinsp;Joules per day of energy. 
+
+!!! abstract "Can we harvest our daily energy needs&thinsp;??"
+    Vendors of energy-harvesting components will commonly characterize their offerings in terms of **J/day** (or **mWh/day**).&thinsp; By making this figure readily available, **EM&bull;Scope** enables us to quickly determinime the viability of a particular solution.
+
+    Knowing that our application performs multiple activities at different rates, a simple sum of **J/day** results derived from benchmarking each activity in isolation provides a reasonable model of energy consumption within the application as a whole.
+
+Knowing **J/day**, we'll calculate our final **EM&bull;erald** score using a constant which approximates the energy capacity of a standard CR2032 coin-cell batter:
+
+:arrow_right:&emsp;EM&bull;eralds &thinsp;=&thinsp; 2400 / (_Joules-per-day_ × 30) &thinsp;=&thinsp; 80 / _Joules-per-day_<br>
+:arrow_right:&emsp;CR2032-capacity&thinsp;:&thinsp; 225&thinsp;mAh × 3.6 × 3.0&thinsp;V &approx; 2.43&thinsp;kJ<br>
+:arrow_right:&emsp;1 EM&bull;erald &thinsp;&approx;&thinsp; 1 CR2032-month
+
+Returning to our example:&thinsp; BLE advertising at a one-second rate scores **27.30 EM&bull;eralds**; BLE advertising at a ten-second rate scores **172.31 EM&bull;eralds**.&thinsp; As the duration of the period further increases, our BLE advertising score asymptotically approaches **~420 EM&bull;eralds**.
+
+This particular example uses an MCU(1) which features extremely low current consumption when in deep-sleep.&thinsp; While by no means the winner in a 1&thinsp;Hz race, this chip pulls away from the competitition(2) once we throttle back to (arguably) a more realistic rate of activity.
+
+!!! bulb "Five years on a coin-cell...."
+    Foo
+
+{ .annotate }
+
+1. Texas Instruments [CC2340R5](https://www.ti.com/product/CC2340R5)
+2. Nordic [nRF54L15](https://www.nordicsemi.com/Products/nRF54L15),&thinsp; Silicon Labs [ERF32BG22E](https://www.silabs.com/wireless/bluetooth/efr32bg22-series-2-socs)
+
+
 ## Learning more about **EM&bull;Scope**
+ 
