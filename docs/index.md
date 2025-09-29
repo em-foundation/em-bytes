@@ -8,10 +8,7 @@
 
 Our "tiny-code for tiny-chips" mantra reflects a deep-seated belief about the current state of embedded software engineering &ndash; too much memory bloat, too much runtime overhead, and too many high-level programming APIs for the job at hand.
 
-With so much technical debt taken on by today's legacy embedded software, next-generation MCUs have little choice but to add _more_ memory and _more_ MIPs to mitigate this software's ever-expanding size and complexity.
-
-<!-- By rethinking software development for resource-constrained hardware platforms, we look to enable a new breed of embedded applications targeting minimalistic MCUs &ndash; systems in which every byte of memory and &mu;Joule of energy impacts their cost and viability.
--->
+With so much technical debt taken on by today's legacy embedded software, next-generation MCUs have little choice but to add _more_ memory and _more_ MIPs to mitigate software's ever-expanding size and complexity.
 
 !!! eighth "On a personal note"
 
@@ -36,7 +33,7 @@ We'll keep the articles short &ndash; skim them in a minute, digest them in unde
 
 ## The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action
 
-A basic **Bluetooth Low Energy** beacon &ndash; continually advertising the same packet on multiple channels &ndash; serves as the "Hello World" of **BLE** applications.&thinsp; So let's see what we might learn by measuring and comparing different **BLE** HW/SW platforms with the help of **EM&bull;Scope**.
+A basic **Bluetooth Low Energy** beacon &ndash; continually advertising the same packet on multiple channels &ndash; serves as the "Hello World" of **BLE** applications.&thinsp; So let's see what we might learn by using **EM&bull;Scope** to measure and compare a representative set of **BLE** HW/SW platforms.
 
 {[sp,em-float-right][coming soon....](#)}
 <br>
