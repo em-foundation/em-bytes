@@ -36,3 +36,7 @@ We'll keep the articles short &ndash; skim them in a minute, digest them in unde
 
 ## The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action
 
+A basic **Bluetooth Low Energy** beacon &ndash; continually advertising the same packet on multiple channels &ndash; serves as the "Hello World" of **BLE** applications.&thinsp; So let's see what we might learn by measuring and comparing different **BLE** HW/SW platforms with the help of **EM&bull;Scope**.
+
+{[sp,em-float-right][coming soon....](#)}
+<br>
