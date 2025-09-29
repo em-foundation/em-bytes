@@ -116,4 +116,9 @@ This particular example uses an MCU(1) which features extremely low current cons
 
 
 ## Learning more about **EM&bull;Scope**
- 
+
+**The EM Foundation** makes **EM&bull;Scope** openly available on [GitHub](https://github.com/em-foundation/emscope), where you'll find this extended [ReadMore](https://github.com/em-foundation/emscope/blob/main/docs/ReadMore.md) file covering installation and usage of the tool.&thinsp; Even if you don't plan to work with **EM&bull;Scope** in the near-term, at least skim through its documentation.
+
+We've also made available the [em-foundation/BlueJoule](https://github.com/em-foundation/BlueJoule) repository housing power profiles captured by others &ndash; including the BLE example seen earlier.&thinsp; You need not invest in a HW power analyzer to learn more about the benefits **EM&bull;Scope** offers to SW developers.
+
+{[hc]}
