@@ -20,7 +20,7 @@ Consider a typical "ultra-low-power" wireless sensor tag &ndash; a class of embe
 :four: &emsp;transmit results (wirelessly) to a gateway<br>
 :five: &emsp;re-enter (low-power) deep-sleep mode
 
-With application requirements dictating active duty-cycles ranging from once-per-second down to once-per-day, minimizing elapsed time between steps :one: through :five: would surely lower total power consumption &ndash; by re-entering "deep-sleep" that much sooner.
+With application requirements dictating periods of activity ranging from once-per-second down to once-per-day, minimizing elapsed time between steps :one: through :five: would surely lower total power consumption &ndash; by re-entering "deep-sleep" that much sooner.
 
 In practice, steps :two: and :four: involve MCU peripherals performing I/O operations at application-defined data-rates &ndash; an ADC sampling at 15&thinsp;kHz, a radio transmitting at 1&thinsp;Mbps, etc.&thinsp;  With little to do while awaiting I/O completion, software often idles within a "lite-sleep" mode.
 
@@ -34,13 +34,13 @@ In practice, steps :two: and :four: involve MCU peripherals performing I/O opera
 Once the MCU returns to its "active" mode &ndash; and the application finally does some useful work &ndash; the impact of software on total power consumption boils down to the _number_&thinsp; of instructions the CPU must fetch and execute.&nbsp; But how can we best quantify this impact&thinsp;???
 
 !!! bulb "**Joules**, not **Watts**"
-    As software practitioners, we need focus on total power consumption over a period of time.&thinsp; Only then can we begin to appreciate the oversized :wink: impact our code might have on overall energy efficiency.
+    As programmers, we must focus on power consumption over a period of time.&thinsp; Only then can we appreciate the oversized :wink: impact our code might have on overall energy efficiency.
 
 ## Profiling energy with **EM&bull;Scope**
 
 To bring energy efficiency into the foreground, we've introduced **EM&bull;Scope** &ndash; a tool used to capture, analyze, display, and deliver real-time profiles of power-consumption.
 
-Measuring target embedded systems performing typical periodic functions, **EM&bull;Scope** offers insights to developers and integrators alike not found in the MCU data sheet &ndash; by adding the dimension of _time_&thinsp; to the equation.
+Measuring target embedded systems performing typical periodic tasks, **EM&bull;Scope** offers insights to developers and integrators alike not found in the MCU data sheet &ndash; by adding the dimension of _time_&thinsp; to the equation.
 
 !!! eighth "On a personal note"
     Back in the day, I never really worried about _minimizing_&thinsp; system power consumption when developing embedded application software.&thinsp; Instead, we fixated on _maximizing_&thinsp; processor utilization &ndash; using every available MIP to continuously perform a multitude of real-time tasks.
@@ -95,9 +95,9 @@ By measuring power consumption when in deep-sleep, **EM&bull;Scope** can calcula
 !!! abstract "Can we harvest our daily energy needs&thinsp;??"
     Vendors of energy-harvesting components will commonly characterize their offerings in terms of **J/day** (or **mWh/day**).&thinsp; By making this figure readily available, **EM&bull;Scope** enables us to quickly determinime the viability of a particular solution.
 
-    Knowing that our application performs multiple activities at different rates, a simple sum of **J/day** results derived from benchmarking each activity in isolation provides a reasonable model of energy consumption within the application as a whole.
+    Since our application performs multiple activities at different rates, a simple sum of **J/day** results derived from benchmarking each activity in isolation provides a reasonable model of overall energy consumption within the application as a whole.
 
-Knowing **J/day**, we'll calculate our final **EM&bull;erald** score using a constant which approximates the energy capacity of a standard CR2032 coin-cell batter:
+Knowing **J/day**, we'll calculate our final **EM&bull;erald** score using a constant which approximates the energy capacity of a standard CR2032 coin-cell battery:
 
 :arrow_right:&emsp;EM&bull;eralds &thinsp;=&thinsp; 2400 / (_Joules-per-day_ × 30) &thinsp;=&thinsp; 80 / _Joules-per-day_<br>
 :arrow_right:&emsp;CR2032-capacity&thinsp;:&thinsp; 225&thinsp;mAh × 3.6 × 3.0&thinsp;V &approx; 2.43&thinsp;kJ<br>
@@ -111,13 +111,13 @@ This particular example uses an MCU(1) which features extremely low current cons
 1. Texas Instruments [CC2340R5](https://www.ti.com/product/CC2340R5)
 2. Nordic [nRF54L15](https://www.nordicsemi.com/Products/nRF54L15),&thinsp; Silicon Labs [ERF32BG22E](https://www.silabs.com/wireless/bluetooth/efr32bg22-series-2-socs)
 
-!!! bulb "&ldquo;five years on a coin-cell&rdquo; &thinsp;&equiv;&thinsp; 60 **EM&bull;eralds**"
-    To many, the _gold standard_&thinsp; for any ultra-low-power embedded system....&thinsp; But even if your application has different requirements for longevity and employs different sources of power, **EM&bull;Scope** helps developers continually mine their target system for **_more_&thinsp; EM&bull;eralds**.
+!!! bulb "The gold standard &mdash; _&ldquo;five years on a coin-cell&rdquo;_ &thinsp;&thinsp;&equiv;&thinsp; 60 **EM&bull;eralds**"
+    Even if your ultra-low-power embedded application has different requirements for longevity and employs different sources of power, **EM&bull;Scope** helps developers continually mine their target system for **_more_&thinsp; EM&bull;eralds**.
 
 
 ## Learning more about **EM&bull;Scope**
 
-**The EM Foundation** makes **EM&bull;Scope** openly available on [GitHub](https://github.com/em-foundation/emscope), where you'll find this extended [ReadMore](https://github.com/em-foundation/emscope/blob/main/docs/ReadMore.md) file covering installation and usage of the tool.&thinsp; Even if you don't plan to work with **EM&bull;Scope** in the near-term, at least skim through its documentation.
+**The EM Foundation** makes **EM&bull;Scope** openly available on [GitHub](https://github.com/em-foundation/emscope), where you'll find this extended [ReadMore](https://github.com/em-foundation/emscope/blob/docs-stable/docs/ReadMore.md) file covering installation and usage of the tool.&thinsp; Even if you don't plan to work with **EM&bull;Scope** in the near-term, at least skim through its documentation.
 
 We've also made available the [em-foundation/BlueJoule](https://github.com/em-foundation/BlueJoule) repository housing power profiles captured by others &ndash; including the BLE example seen earlier.&thinsp; You need not invest in a HW power analyzer to learn more about the benefits **EM&bull;Scope** offers to SW developers.
 

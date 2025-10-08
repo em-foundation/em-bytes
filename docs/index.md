@@ -22,7 +22,11 @@ With so much technical debt taken on by today's legacy embedded software, next-g
 
 The articles which follow touch on a range of topics under our "tiny-code for tiny-chips" umbrella &ndash; often highlighting initiatives by the **The EM Foundation** to drive change in how we think about resource-constrained embedded systems.
 
-We'll keep the articles short &ndash; skim them in a minute, digest them in under ten....&thinsp;  And though each post will invariably cover technical material, we'll keep the content high-level &ndash; flying at 10,000 feet, but with links to other resources for those wishing to deep-dive on the ground. 
+We'll keep the articles short &ndash; skim them in a minute, digest them in under ten....&thinsp;  And though each post will invariably cover technical material, we'll keep the content high-level &ndash; flying at 10,000 feet, but with links to other resources for those wishing to deep-dive on the ground.
+
+{[hc]}
+
+<br>
 
 ## Quantifying energy efficiency with EM&bull;Scope
 
