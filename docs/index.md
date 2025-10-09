@@ -4,7 +4,7 @@
 
 ### Bite-sized posts on "tiny-code for tiny-chips"
 
-**EM&bull;Bytes** serves as the voice of [**The EM Foundation**](#) &ndash; a 501(c)(3) non-profit which sponsors and promotes novel software technology for resource-constrained embedded systems.
+**EM&bull;Bytes** serves as the voice of [**The EM Foundation**](https://www.openem.org/) &ndash; a 501(c)(3) non-profit which sponsors and promotes novel software technology for resource-constrained embedded systems.
 
 Our "tiny-code for tiny-chips" mantra reflects a deep-seated belief about the current state of embedded software engineering &ndash; too much memory bloat, too much runtime overhead, and too many high-level programming APIs for the job at hand.
 
