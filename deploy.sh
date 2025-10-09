@@ -11,6 +11,4 @@ release_repo() {
     git push --tags
 }
 
-pushd build/docs
 release_repo
-popd
