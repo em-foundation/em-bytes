@@ -1,0 +1,640 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.41">
+    
+    
+      
+        <title>EM•Bytes  ·  Quantifying energy efficiency with EM•Scope - EM&bull;Bytes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-12 6 6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Quicksand";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-B2D564DJH3"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-B2D564DJH3",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-B2D564DJH3",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#embytes-quantifying-energy-efficiency-with-emscope" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EM&amp;bull;Bytes" class="md-header__button md-logo" aria-label="EM&bull;Bytes" data-md-component="logo">
+      
+  <img src="../../assets/logo12.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EM&bull;Bytes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EM&bull;Bytes &thinsp;&#183;&thinsp; Quantifying energy efficiency with EM&bull;Scope
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EM&amp;bull;Bytes" class="md-nav__button md-logo" aria-label="EM&bull;Bytes" data-md-component="logo">
+      
+  <img src="../../assets/logo12.png" alt="logo">
+
+    </a>
+    EM&bull;Bytes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EM&bull;Bytes &thinsp;&#183;&thinsp; Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Articles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    EM&bull;Bytes &thinsp;&#183;&thinsp; Quantifying energy efficiency with EM&bull;Scope
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    EM&bull;Bytes &thinsp;&#183;&thinsp; Quantifying energy efficiency with EM&bull;Scope
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-power-w-to-energy-j" class="md-nav__link">
+    <span class="md-ellipsis">
+      From power (&thinsp;W&thinsp;) to energy (&thinsp;J&thinsp;)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiling-energy-with-emscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profiling energy with EM&bull;Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantifying-energy-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantifying energy efficiency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-more-about-emscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning more about EM&bull;Scope
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-power-w-to-energy-j" class="md-nav__link">
+    <span class="md-ellipsis">
+      From power (&thinsp;W&thinsp;) to energy (&thinsp;J&thinsp;)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiling-energy-with-emscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profiling energy with EM&bull;Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantifying-energy-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantifying energy efficiency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-more-about-emscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning more about EM&bull;Scope
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="embytes-quantifying-energy-efficiency-with-emscope">EM&bull;Bytes &thinsp;<strong>&#183;</strong>&thinsp; Quantifying energy efficiency with EM&bull;Scope</h1>
+<!-- --8<-- [start:excerpt] -->
+
+<div class="article-meta">
+<p><img alt="📆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c6.svg" title=":calendar:" /> October 1, 2025&thinsp; · <img alt="⏱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/23f1.svg" title=":stopwatch:" /> 7 min read</p>
+</div>
+<p>Vendor data sheets might specify that an ultra-low-power MCU draws (say) <strong>700&thinsp;nA @ 3&thinsp;V</strong> when in its "deep-sleep" mode.  Very nice – but until we factor in our application workload, we have no way to truly assess the impact of these MCU specs on overall energy efficiency.</p>
+<!-- --8<-- [end:excerpt] -->
+
+<h2 id="from-power-w-to-energy-j">From power (&thinsp;<strong>W</strong>&thinsp;) to energy (&thinsp;<strong>J</strong>&thinsp;)</h2>
+<p>Unless our MCU stays completely inert &ndash; awaiting reset in "shutdown" mode &ndash; embedded application software has undue influence upon system power consumption over time.</p>
+<p>Consider a typical "ultra-low-power" wireless sensor tag &ndash; a class of embedded MCU applications which embody a relatively straightforward cyclic design pattern:</p>
+<p><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /> &emsp;wakeup from deep-sleep mode<br>
+<img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /> &emsp;acquire data from the environment<br>
+<img alt="3⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/33-20e3.svg" title=":three:" /> &emsp;analyze this data using an algorithm<br>
+<img alt="4⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/34-20e3.svg" title=":four:" /> &emsp;transmit results (wirelessly) to a gateway<br>
+<img alt="5⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/35-20e3.svg" title=":five:" /> &emsp;re-enter (low-power) deep-sleep mode</p>
+<p>With application requirements dictating periods of activity ranging from once-per-second down to once-per-day, minimizing elapsed time between steps <img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /> through <img alt="5⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/35-20e3.svg" title=":five:" /> would surely lower total power consumption &ndash; by re-entering "deep-sleep" that much sooner.</p>
+<p>In practice, steps <img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /> and <img alt="4⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/34-20e3.svg" title=":four:" /> involve MCU peripherals performing I/O operations at application-defined data-rates &ndash; an ADC sampling at 15&thinsp;kHz, a radio transmitting at 1&thinsp;Mbps, etc.&thinsp;  With little to do while awaiting I/O completion, software often idles within a "lite-sleep" mode.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Typical MCU power specs</p>
+<p>MCU <strong>lite-sleep</strong> mode typically consumes under <strong>1&thinsp;mW</strong> of power and enables interrupt response times of less than <strong>1&thinsp;&mu;s</strong>&thinsp;.&nbsp;  But while the CPU idles, other peripherals such as the radio could remain active &ndash; in fact drawing <em>more</em>&thinsp; power than the CPU would alone.</p>
+<p>By constract, MCU <strong>deep-sleep</strong> mode might consume well under <strong>10&thinsp;&mu;W</strong> of power &ndash; but wakeup times could stretch to <strong>100s of &mu;s</strong>&thinsp;.&thinsp;  While any active peripheral can awaken the CPU when idling, "deep-sleep" mode only powers a limited set of MCU elements (GPIOs, RTCs) which can trigger wakeup interrupts.</p>
+<p>Finally, MCU <strong>active</strong> mode &ndash; when the CPU fetches and executes instructions &ndash; will typically draw power at levels expressed as <strong>&mu;W&thinsp;/&thinsp;Mhz</strong>&thinsp;.&nbsp;  Standard industry metrics like <strong>EEMBC CoreMark&reg;</strong>&thinsp; help normalize performance claims by individual MCU vendors.</p>
+</div>
+<p>Once the MCU returns to its "active" mode &ndash; and the application finally does some useful work &ndash; the impact of software on total power consumption boils down to the <em>number</em>&thinsp; of instructions the CPU must fetch and execute.&nbsp; But how can we best quantify this impact&thinsp;???</p>
+<div class="admonition bulb">
+<p class="admonition-title"><strong>Joules</strong>, not <strong>Watts</strong></p>
+<p>As programmers, we must focus on power consumption over a period of time.&thinsp; Only then can we appreciate the oversized <img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f609.svg" title=":wink:" /> impact our code might have on overall energy efficiency.</p>
+</div>
+<h2 id="profiling-energy-with-emscope">Profiling energy with <strong>EM&bull;Scope</strong></h2>
+<p>To bring energy efficiency into the foreground, we've introduced <strong>EM&bull;Scope</strong> &ndash; a tool used to capture, analyze, display, and deliver real-time profiles of power-consumption.</p>
+<p>Measuring target embedded systems performing typical periodic tasks, <strong>EM&bull;Scope</strong> offers insights to developers and integrators alike not found in the MCU data sheet &ndash; by adding the dimension of <em>time</em>&thinsp; to the equation.</p>
+<div class="admonition eighth">
+<p class="admonition-title">On a personal note</p>
+<p>Back in the day, I never really worried about <em>minimizing</em>&thinsp; system power consumption when developing embedded application software.&thinsp; Instead, we fixated on <em>maximizing</em>&thinsp; processor utilization &ndash; using every available MIP to continuously perform a multitude of real-time tasks.</p>
+<p>In my mind, the <strong>Texas Instruments MSP430</strong> (announced in the 1990s) set the performance standard for the <em>ultra-low-power</em>&thinsp; microcontroller as we know it today.&thinsp; If nothing else, the MSP430 stands alone as the first MCU to use items from your <a href="https://www.youtube.com/watch?v=nPZISRQAQpw">fridge</a> as a power source.</p>
+<p>As a software developer, the rules of the game have now changed &ndash; to one in which "doing nothing" for the longest possible time <em>maximizes</em> overall energy efficiency.&thinsp; Yes, we still want to execute code as quickly as possible &ndash; so we can enjoy a "deep-sleep" that much sooner.</p>
+</div>
+<p><strong>EM&bull;Scope</strong> captures real-time information via a hardware <em>power analyzer</em>&thinsp; connected to your target MCU board as well as your host PC:</p>
+<figure id="fig1">
+<p><a class="glightbox" href="/assets/fig-001-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="/assets/fig-001-1.png" /></a></p>
+<figcaption>EM&bull;Scope Hardware Configuration 
+</figcaption>
+</figure>
+<p>At present, the <strong>EM&bull;Scope</strong> tool supports two different analyzers &ndash; each used to record power consumption in real-time while also sourcing voltage to your target board:</p>
+<p><img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; <strong>Joulescope</strong> <a href="https://www.joulescope.com/products/js220-joulescope-precision-energy-analyzer">JS220</a>, a high-precision analyzer that belongs in every hardware lab</p>
+<p><img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; <strong>Nordic</strong> <a href="https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2">PPK2</a>, an entry-level analyzer that fits any engineer's personal budget</p>
+<p>To normalize measurement, <strong>EM&bull;Scope</strong> presumes your target board will repeatedly perform a <em>single</em>&thinsp; application task of interest &ndash; entering deep-sleep mode when complete, and awakening one-second later for the next iteration.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Breaking the problem down</p>
+<p>While embedded applications typically perform <em>multiple</em>&thinsp; tasks (sensing, analyzing, logging, transmitting) at a variety of rates, measuring the power consumption of each task in isolation &ndash; akin to unit-testing &ndash; helps us construct an application-level power-profile</p>
+<p>Knowing the 1&thinsp;Hz energy profile of each task [&thinsp;<strong>&mu;J/s</strong>&thinsp;], we can extrapolate to other rates of activity as well as combine results to characterize the application as a whole.&thinsp; Indi&shy;vidual tasks, while active less than 1% of the time, can often account for over 90% of the <strong>&mu;J/s</strong>.</p>
+</div>
+<p>Since periodic activity occurs once per-second, recording for as little as 10–15&thinsp;seconds should provide a reasonable raw sample set for further analysis.&thinsp; Often an iterative process to finalize results, <strong>EM&bull;Scope</strong> can generate interactive plots along the way as a visual aid:</p>
+<figure id="fig2">
+<p><a class="glightbox" href="/assets/fig-001-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="/assets/fig-001-2.png" /></a></p>
+<figcaption>Wakeup · Execute · Sleep  
+</figcaption>
+</figure>
+<p>This particular plot displays power consumption of a single activation of our application task of interest &ndash; in this case, a <strong>Bluetooth Low-Energy</strong> (BLE) advertising event which transmits the same small data packet on three different 2.4&thinsp;GHz channels.</p>
+<p>Though not obvious, the trio of 300&thinsp;ms radio transmissions drawing 18&thinsp;mW accounts for less than half the power consumed between wakeup and sleep.&thinsp; Closer scrutiny revels that <em>software execution</em> (while only drawing 8&thinsp;mW) has greater impact on the overall power profile.</p>
+<div class="admonition bulb">
+<p class="admonition-title">If you can't see the problem, how can you fix it&thinsp;??</p>
+<p>Visualizing power consumption over time with <strong>EM&bull;Scope</strong> gives software engineers a better perspective on how optimizing their code can contribute to overall energy efficiency &ndash; independent of any improvements in the underlying hardware technology.</p>
+</div>
+<h2 id="quantifying-energy-efficiency">Quantifying energy efficiency</h2>
+<p>In the spirit of <a href="https://www.eembc.org/coremark/"><strong>CoreMark</strong></a>&thinsp; (used for comparing CPU performance)&thinsp; <strong>EM&bull;Scope</strong> introduces a new single-score metric for quantifying energy efficiency &ndash; the <strong>EM&bull;erald</strong>.&thinsp; Like other bench&shy;mark scores, "higher is better" &ndash; more <strong>EM&bull;eralds</strong> means less power and greater efficiency.</p>
+<p>Starting with a baseline measurement of <strong>&mu;J/s</strong> using (say) ten 1&thinsp;Hz <em>wakeup · execute · sleep</em> cycles, we can easily calculate <strong>J/day</strong>.&thinsp; In our earlier example, <strong>EM&bull;Scope</strong> determined that a complete one-second cycle consumed 33.913&thinsp;&mu;Joules which scales to 2.930&thinsp;Joules per day.</p>
+<p>By measuring power consumption when in deep-sleep, <strong>EM&bull;Scope</strong> can calculate <strong>J/day</strong> for periodic activity occuring at <em>any</em>&thinsp; rate.&thinsp; If the BLE advertising event seen earlier happened once every ten seconds, this task would now require only 0.463&thinsp;Joules per day of energy. </p>
+<div class="admonition abstract">
+<p class="admonition-title">Can we harvest our daily energy needs&thinsp;??</p>
+<p>Vendors of energy-harvesting components will commonly characterize their offerings in terms of <strong>J/day</strong> (or <strong>mWh/day</strong>).&thinsp; By making this figure readily available, <strong>EM&bull;Scope</strong> enables us to quickly determinime the viability of a particular solution.</p>
+<p>Since our application performs multiple activities at different rates, a simple sum of <strong>J/day</strong> results derived from benchmarking each activity in isolation provides a reasonable model of overall energy consumption within the application as a whole.</p>
+</div>
+<p>Knowing <strong>J/day</strong>, we'll calculate our final <strong>EM&bull;erald</strong> score using a constant which approximates the energy capacity of a standard CR2032 coin-cell battery:</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" />&emsp;EM&bull;eralds &thinsp;=&thinsp; 2400 / (<em>Joules-per-day</em> × 30) &thinsp;=&thinsp; 80 / <em>Joules-per-day</em><br>
+<img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" />&emsp;CR2032-capacity&thinsp;:&thinsp; 225&thinsp;mAh × 3.6 × 3.0&thinsp;V &approx; 2.43&thinsp;kJ<br>
+<img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" />&emsp;1 EM&bull;erald &thinsp;&approx;&thinsp; 1 CR2032-month</p>
+<p>Returning to our example:&thinsp; BLE advertising at a one-second rate scores <strong>27.30 EM&bull;eralds</strong>; BLE advertising at a ten-second rate scores <strong>172.31 EM&bull;eralds</strong>.&thinsp; As the duration of the period further increases, our BLE advertising score asymptotically approaches <strong>~420 EM&bull;eralds</strong>.</p>
+<p class="annotate">This particular example uses an MCU(1) which features extremely low current consumption when in deep-sleep.&thinsp; While by no means the winner in a 1&thinsp;Hz race, this chip pulls away from the competitition(2) once we throttle back to (arguably) a more realistic rate of activity.</p>
+<ol>
+<li>Texas Instruments <a href="https://www.ti.com/product/CC2340R5">CC2340R5</a></li>
+<li>Nordic <a href="https://www.nordicsemi.com/Products/nRF54L15">nRF54L15</a>,&thinsp; Silicon Labs <a href="https://www.silabs.com/wireless/bluetooth/efr32bg22-series-2-socs">ERF32BG22E</a></li>
+</ol>
+<div class="admonition bulb">
+<p class="admonition-title">The gold standard &mdash; <em>&ldquo;five years on a coin-cell&rdquo;</em> &thinsp;&thinsp;&equiv;&thinsp; 60 <strong>EM&bull;eralds</strong></p>
+<p>Even if your ultra-low-power embedded application has different requirements for longevity and employs different sources of power, <strong>EM&bull;Scope</strong> helps developers continually mine their target system for <strong><em>more</em>&thinsp; EM&bull;eralds</strong>.</p>
+</div>
+<h2 id="learning-more-about-emscope">Learning more about <strong>EM&bull;Scope</strong></h2>
+<p><strong>The EM Foundation</strong> makes <strong>EM&bull;Scope</strong> openly available on <a href="https://github.com/em-foundation/emscope">GitHub</a>, where you'll find this extended <a href="https://github.com/em-foundation/emscope/blob/docs-stable/docs/ReadMore.md">ReadMore</a> file covering installation and usage of the tool.&thinsp; Even if you don't plan to work with <strong>EM&bull;Scope</strong> in the near-term, at least skim through its documentation.</p>
+<p>We've also made available the <a href="https://github.com/em-foundation/BlueJoule">em-foundation/BlueJoule</a> repository housing power profiles captured by others &ndash; including the BLE example seen earlier.&thinsp; You need not invest in a HW power analyzer to learn more about the benefits <strong>EM&bull;Scope</strong> offers to SW developers.</p>
+<p><span class="em-float-right">Happy coding&thinsp;!!! &ensp; <img alt="🌝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f31d.svg" title=":full_moon_with_face:" />&nbsp;&nbsp;&nbsp;<img alt="💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4bb.svg" title=":computer:" /></span></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 &ndash; The EM Foundation
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/the-em-foundation/about/?viewAsMember=true" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/em-foundation" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../extra.js"></script>
+      
+        <script src="../../js/open_in_new_tab.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

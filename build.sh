@@ -6,7 +6,7 @@ SITE=site
 
 ## version
 
-VERS='26.1.2'
+VERS='25.0.0'
 TIME=`date -u +%Y%m%d%H%M`
 VERS_FULL="${VERS}.${TIME}"
 
