@@ -100,17 +100,17 @@ div.md-header__title {
 }
 
 div.md-search__inner {
-    padding-bottom: 10px;
-    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-top: 12px;
 }
 
 
 div.md-search__inner::after {
     content: var(--em-time);
-    font-size: 0.4rem;
+    font-size: 0.45rem;
     position: absolute;
     top: 48px;
-    left: 175px;
+    left: 250px;
 }
 
 .md-nav__title[for="__toc"] {
