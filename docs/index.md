@@ -39,5 +39,5 @@ We'll keep the articles short &ndash; skim them in a minute, digest them in unde
 
 A basic **Bluetooth Low Energy** beacon &ndash; continually advertising the same packet on multiple channels &ndash; serves as the "Hello World" of **BLE** applications.&thinsp; So let's see what we might learn by using **EM&bull;Scope** to measure and compare a representative set of **BLE** HW/SW platforms.
 
-{[sp,em-float-right][coming soon....](#)}
+{[sp,em-float-right][coming soon....](#the-bluejoule-benchmark--emscope-in-action)}
 <br>
