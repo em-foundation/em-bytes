@@ -39,12 +39,12 @@
 }
 
 .md-header__ellipsis {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .md-header__button.md-logo img {
-    height: 1.75rem;
-    margin: 0px 0px 3px 9px;
+    height: 2rem;
+    margin: 6px 0px 3px 12px;
 }
 
 a.md-header__button.md-logo {
@@ -54,10 +54,6 @@ a.md-header__button.md-logo {
 a[href^="#__codelineno"] {
     color: hsl(34, 75%, 75%) !important;
 }
-
-/*    color: hsl(203, 100%, 75%); */
-/*    color: hsl(278, 75%, 75%); */
-
 
 article a[href^="http"]::after {
     content: "\2009\2197";
@@ -109,8 +105,8 @@ div.md-search__inner::after {
     content: var(--em-time);
     font-size: 0.45rem;
     position: absolute;
-    top: 48px;
-    left: 250px;
+    top: 49px;
+    left: 236px;
 }
 
 .md-nav__title[for="__toc"] {
