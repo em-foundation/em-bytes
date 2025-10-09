@@ -8,6 +8,11 @@
     --md-typeset-a-color:  hsl(175, 80%, 40%) !important;
 }
 
+:root {
+    --em-vers: "26.2.1";
+    --em-time: "202502201834";
+}
+
 [data-md-color-scheme="slate"] {
     --md-hue: 232;
     --md-default-bg-color: hsla(var(--md-hue),15%,15%,1);
@@ -92,6 +97,20 @@ nav.md-header__inner {
 
 div.md-header__title {
     margin-left: 18px !important;
+}
+
+div.md-search__inner {
+    padding-bottom: 10px;
+    padding-top: 8px;
+}
+
+
+div.md-search__inner::after {
+    content: var(--em-time);
+    font-size: 0.4rem;
+    position: absolute;
+    top: 48px;
+    left: 175px;
 }
 
 .md-nav__title[for="__toc"] {
