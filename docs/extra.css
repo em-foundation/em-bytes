@@ -521,15 +521,15 @@ span.em-screen {
 
 .md-typeset .admonition.eighth,
 .md-typeset details.eighth {
-    border-color: hsl(203,100%,75%);
+    border-color: hsl(280, 100%, 80%);
 }
 .md-typeset .eighth > .admonition-title,
 .md-typeset .eighth > summary {
-    background-color: hsla(203, 100%, 70%, 0.1)
+    background-color: hsla(280, 100%, 80%, 0.1)
 }
 .md-typeset .eighth > .admonition-title::before,
 .md-typeset .eighth > summary::before {
-    background-color: hsl(203,100%,75%);
+    background-color: hsl(280,100%,80%);
     -webkit-mask-image: var(--md-admonition-icon--eighth);
         mask-image: var(--md-admonition-icon--eighth);
 }
