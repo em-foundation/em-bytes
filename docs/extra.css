@@ -60,7 +60,8 @@ a[href^="#__codelineno"] {
 
 
 article a[href^="http"]::after {
-    content: "\2009\29C9";
+    content: "\2009\2197";
+    font-size: .65rem;
 }
 
 article a[href^="http"] {
