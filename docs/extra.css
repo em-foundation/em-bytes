@@ -64,27 +64,26 @@ article a[href^="http"]::after {
 }
 
 article a[href^="http"] {
-    color: hsl(196, 100%, 70%);
+    color: hsl(175, 80%, 60%);
 }
 
-
 a.toclink {
-    color: hsl(175, 80%, 40%) !important;
+    color: hsl(175, 80%, 60%) !important;
 }
 
 a.md-nav__link--active {
-    color: hsl(175, 80%, 40%) !important;
+    color: hsl(175, 80%, 60%) !important;
 }
 
 a.em-link {
-    color: hsl(175, 80%, 40%);
+    color: hsl(175, 80%, 60%);
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1pxx;
 }
 
 a:not([class]) {
-    color: hsl(175, 80%, 40%);
+    color: hsl(175, 80%, 60%);
 }
 
 .md-nav--primary {
