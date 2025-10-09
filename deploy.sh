@@ -14,4 +14,3 @@ release_repo() {
 pushd build/docs
 release_repo
 popd
-release_repo
