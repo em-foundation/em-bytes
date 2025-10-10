@@ -683,18 +683,43 @@ span.em-content-unit-link::before {
 h1 {display: none}
 .md-typeset h2 {margin-bottom: 1em !important;}
 .md-typeset h3 {font-size: 1.8em; margin-top: 0; }
-.md-sidebar--primary .md-sidebar__scrollwrap {display: none}
 .md-nav--secondary .md-nav__link{
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+
+.md-sidebar--primary {
+    padding-top: 0px !important;
+}
+
+.md-sidebar--secondary {
+    padding-top: 16px !important;
+}
+
+/* show primary sidebar */
+.md-sidebar--primary .md-sidebar__scrollwrap { display: initial !important }
+
+/* hide built-in title and the auto nav list */
+.md-nav--primary .md-nav__title { display: none }
+.md-nav--primary .md-nav__list { display: none }
+
+/* style the injected Home link */
+.emd-home { 
+    padding-left: 6rem;
+}
+.emd-home__link {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: hsl(175, 80%, 60%);
+}
+.emd-home__link:hover { color: var(--md-accent-fg-color) }
 
 .article-meta {
     margin: 0 !important;
     font-size: .7rem;
     opacity: .8;
 }
-
-
 
 /*
 :root {
