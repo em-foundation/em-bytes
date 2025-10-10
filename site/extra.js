@@ -11,3 +11,14 @@ function screenSwap(curElem, newElem) {
     newImg.src = ""
     newImg.src = newSrc
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const wrap = document.querySelector('.md-sidebar--primary .md-sidebar__scrollwrap')
+    if (!wrap) return
+    const logo = document.querySelector('a.md-header__button.md-logo')
+    const href = logo ? logo.getAttribute('href') : '/'
+    const div = document.createElement('div')
+    div.className = 'emd-home'
+    div.innerHTML = `<a class="emd-home__link" href="${href}">Home</a>`
+    wrap.prepend(div)
+})

@@ -18,7 +18,7 @@
     
     
       
-        <title>EM•Bytes  ·  Quantifying energy efficiency with EM•Scope - EM&bull;Bytes</title>
+        <title>EM•Bytes  ·  Quantifying energy efficiency with EM•Scope - EM•Bytes</title>
       
     
     
@@ -113,7 +113,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="EM&amp;bull;Bytes" class="md-header__button md-logo" aria-label="EM&bull;Bytes" data-md-component="logo">
+    <a href="../.." title="EM•Bytes" class="md-header__button md-logo" aria-label="EM•Bytes" data-md-component="logo">
       
   <img src="../../assets/logo12.png" alt="logo">
 
@@ -126,7 +126,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            EM&bull;Bytes
+            EM•Bytes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -207,12 +207,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="EM&amp;bull;Bytes" class="md-nav__button md-logo" aria-label="EM&bull;Bytes" data-md-component="logo">
+    <a href="../.." title="EM•Bytes" class="md-nav__button md-logo" aria-label="EM•Bytes" data-md-component="logo">
       
   <img src="../../assets/logo12.png" alt="logo">
 
     </a>
-    EM&bull;Bytes
+    EM•Bytes
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -476,9 +476,9 @@
 <p>In practice, steps <img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /> and <img alt="4⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/34-20e3.svg" title=":four:" /> involve MCU peripherals performing I/O operations at application-defined data-rates &ndash; an ADC sampling at 15&thinsp;kHz, a radio transmitting at 1&thinsp;Mbps, etc.&thinsp;  With little to do while awaiting I/O completion, software often idles within a "lite-sleep" mode.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Typical MCU power specs</p>
-<p>MCU <strong>lite-sleep</strong> mode typically consumes under <strong>1&thinsp;mW</strong> of power and enables interrupt response times of less than <strong>1&thinsp;&mu;s</strong>&thinsp;.&nbsp;  But while the CPU idles, other peripherals such as the radio could remain active &ndash; in fact drawing <em>more</em>&thinsp; power than the CPU would alone.</p>
-<p>By constract, MCU <strong>deep-sleep</strong> mode might consume well under <strong>10&thinsp;&mu;W</strong> of power &ndash; but wakeup times could stretch to <strong>100s of &mu;s</strong>&thinsp;.&thinsp;  While any active peripheral can awaken the CPU when idling, "deep-sleep" mode only powers a limited set of MCU elements (GPIOs, RTCs) which can trigger wakeup interrupts.</p>
-<p>Finally, MCU <strong>active</strong> mode &ndash; when the CPU fetches and executes instructions &ndash; will typically draw power at levels expressed as <strong>&mu;W&thinsp;/&thinsp;Mhz</strong>&thinsp;.&nbsp;  Standard industry metrics like <strong>EEMBC CoreMark&reg;</strong>&thinsp; help normalize performance claims by individual MCU vendors.</p>
+<p>MCU <strong>lite-sleep</strong> mode typically consumes under <strong>1&thinsp;mW</strong> of power and enables interrupt response times of less than <strong>1&thinsp;&mu;s</strong>.&nbsp;  But while the CPU idles, other peripherals such as the radio could remain active &ndash; in fact drawing <em>more</em>&thinsp; power than the CPU would alone.</p>
+<p>By constract, MCU <strong>deep-sleep</strong> mode might consume well under <strong>10&thinsp;&mu;W</strong> of power &ndash; but wakeup times could stretch to <strong>100s of &mu;s</strong>.&nbsp;  While any active peripheral can awaken the CPU when idling, "deep-sleep" mode only powers a limited set of MCU elements (GPIOs, RTCs) which can trigger wakeup interrupts.</p>
+<p>Finally, MCU <strong>active</strong> mode &ndash; when the CPU fetches and executes instructions &ndash; will typically draw power at levels expressed as <strong>&mu;W&thinsp;/&thinsp;Mhz</strong>.&nbsp;  Standard industry metrics like <strong>EEMBC CoreMark&reg;</strong>&thinsp; help normalize performance claims by individual MCU vendors.</p>
 </div>
 <p>Once the MCU returns to its "active" mode &ndash; and the application finally does some useful work &ndash; the impact of software on total power consumption boils down to the <em>number</em>&thinsp; of instructions the CPU must fetch and execute.&nbsp; But how can we best quantify this impact&thinsp;???</p>
 <div class="admonition bulb">
@@ -501,8 +501,8 @@
 </figcaption>
 </figure>
 <p>At present, the <strong>EM&bull;Scope</strong> tool supports two different analyzers &ndash; each used to record power consumption in real-time while also sourcing voltage to your target board:</p>
-<p><img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; <strong>Joulescope</strong> <a href="https://www.joulescope.com/products/js220-joulescope-precision-energy-analyzer">JS220</a>, a high-precision analyzer that belongs in every hardware lab</p>
-<p><img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; <strong>Nordic</strong> <a href="https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2">PPK2</a>, an entry-level analyzer that fits any engineer's personal budget</p>
+<p><img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; <strong>Joulescope</strong> <a href="https://www.joulescope.com/products/js220-joulescope-precision-energy-analyzer">JS220</a> · a high-precision analyzer that belongs in every hardware lab</p>
+<p><img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; <strong>Nordic</strong> <a href="https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2">PPK2</a> · an entry-level analyzer that fits any engineer's personal budget</p>
 <p>To normalize measurement, <strong>EM&bull;Scope</strong> presumes your target board will repeatedly perform a <em>single</em>&thinsp; application task of interest &ndash; entering deep-sleep mode when complete, and awakening one-second later for the next iteration.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Breaking the problem down</p>

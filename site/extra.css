@@ -10,7 +10,7 @@
 
 :root {
     --em-vers: "25.0.0";
-    --em-time: "202510092236";
+    --em-time: "202510100124";
 }
 
 [data-md-color-scheme="slate"] {
@@ -39,12 +39,12 @@
 }
 
 .md-header__ellipsis {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .md-header__button.md-logo img {
-    height: 1.75rem;
-    margin: 0px 0px 3px 9px;
+    height: 2rem;
+    margin: 6px 0px 3px 12px;
 }
 
 a.md-header__button.md-logo {
@@ -55,36 +55,32 @@ a[href^="#__codelineno"] {
     color: hsl(34, 75%, 75%) !important;
 }
 
-/*    color: hsl(203, 100%, 75%); */
-/*    color: hsl(278, 75%, 75%); */
-
-
 article a[href^="http"]::after {
-    content: "\2009\29C9";
+    content: "\2009\2197";
+    font-size: .65rem;
 }
 
 article a[href^="http"] {
-    color: hsl(196, 100%, 70%);
+    color: hsl(175, 80%, 60%);
 }
 
-
 a.toclink {
-    color: hsl(175, 80%, 40%) !important;
+    color: hsl(175, 80%, 60%) !important;
 }
 
 a.md-nav__link--active {
-    color: hsl(175, 80%, 40%) !important;
+    color: hsl(175, 80%, 60%) !important;
 }
 
 a.em-link {
-    color: hsl(175, 80%, 40%);
+    color: hsl(175, 80%, 60%);
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1pxx;
 }
 
 a:not([class]) {
-    color: hsl(175, 80%, 40%);
+    color: hsl(175, 80%, 60%);
 }
 
 .md-nav--primary {
@@ -109,8 +105,8 @@ div.md-search__inner::after {
     content: var(--em-time);
     font-size: 0.45rem;
     position: absolute;
-    top: 48px;
-    left: 250px;
+    top: 49px;
+    left: 236px;
 }
 
 .md-nav__title[for="__toc"] {
@@ -687,18 +683,43 @@ span.em-content-unit-link::before {
 h1 {display: none}
 .md-typeset h2 {margin-bottom: 1em !important;}
 .md-typeset h3 {font-size: 1.8em; margin-top: 0; }
-.md-sidebar--primary .md-sidebar__scrollwrap {display: none}
 .md-nav--secondary .md-nav__link{
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+
+.md-sidebar--primary {
+    padding-top: 0px !important;
+}
+
+.md-sidebar--secondary {
+    padding-top: 16px !important;
+}
+
+/* show primary sidebar */
+.md-sidebar--primary .md-sidebar__scrollwrap { display: initial !important }
+
+/* hide built-in title and the auto nav list */
+.md-nav--primary .md-nav__title { display: none }
+.md-nav--primary .md-nav__list { display: none }
+
+/* style the injected Home link */
+.emd-home { 
+    padding-left: 6rem;
+}
+.emd-home__link {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: hsl(175, 80%, 60%);
+}
+.emd-home__link:hover { color: var(--md-accent-fg-color) }
 
 .article-meta {
     margin: 0 !important;
     font-size: .7rem;
     opacity: .8;
 }
-
-
 
 /*
 :root {
