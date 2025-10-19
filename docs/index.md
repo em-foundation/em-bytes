@@ -18,7 +18,7 @@ With so much technical debt taken on by today's legacy embedded software, next-g
 
     But what if we could _shrink_&thinsp; this software by an order of magnitude &ndash; and enjoy comparable reductions in power consumption and system cost&thinsp;???
     
-    Knowing that we truly have "tiny-code", we can imagine a new breed of "tiny-chips" &ndash; novel MCU architectures with 10&times; gains in performance and efficiency.
+    With "tiny-code" of this scale at hand, we can also imagine a new breed of "tiny-chips" featuring novel MCU architectures with 10&times; gains in performance and efficiency.
 
 The articles which follow touch on a range of topics under our "tiny-code for tiny-chips" umbrella &ndash; often highlighting initiatives by the **The EM Foundation** to drive change in how we think about resource-constrained embedded systems.
 
@@ -37,7 +37,7 @@ We'll keep the articles short &ndash; skim them in a minute, digest them in unde
 
 ## The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action
 
-A basic **Bluetooth Low Energy** beacon &ndash; continually advertising the same packet on multiple channels &ndash; serves as the "Hello World" of **BLE** applications.&thinsp; So let's see what we might learn by using **EM&bull;Scope** to measure and compare a representative set of **BLE** HW/SW platforms.
+--8<-- "articles/002-BlueJoule.md:excerpt"
 
 {[sp,em-float-right][coming soon....](#the-bluejoule-benchmark--emscope-in-action)}
 <br>

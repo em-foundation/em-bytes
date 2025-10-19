@@ -47,7 +47,7 @@ Measuring target embedded systems performing typical periodic tasks, **EM&bull;S
 
     In my mind, the **Texas Instruments MSP430** (announced in the 1990s) set the performance standard for the _ultra-low-power_&thinsp; microcontroller as we know it today.&thinsp; If nothing else, the MSP430 stands alone as the first MCU to use items from your [fridge](https://www.youtube.com/watch?v=nPZISRQAQpw) as a power source.
 
-    As a software developer, the rules of the game have now changed &ndash; to one in which "doing nothing" for the longest possible time _maximizes_ overall energy efficiency.&thinsp; Yes, we still want to execute code as quickly as possible &ndash; so we can enjoy a "deep-sleep" that much sooner.
+    As a SW developer, the rules of the game have changed &ndash; to one in which "doing nothing" for the longest possible time _maximizes_ overall energy efficiency.&thinsp; Yes, we still want to execute code as quickly as possible &ndash; but now to enjoy our "deep-sleep" that much sooner. :sleeping:
 
 **EM&bull;Scope** captures real-time information via a hardware _power analyzer_&thinsp; connected to your target MCU board as well as your host PC:
 
@@ -95,7 +95,7 @@ By measuring power consumption when in deep-sleep, **EM&bull;Scope** can calcula
 !!! abstract "Can we harvest our daily energy needs&thinsp;??"
     Vendors of energy-harvesting components will commonly characterize their offerings in terms of **J/day** (or **mWh/day**).&thinsp; By making this figure readily available, **EM&bull;Scope** enables us to quickly determinime the viability of a particular solution.
 
-    Since our application performs multiple activities at different rates, a simple sum of **J/day** results derived from benchmarking each activity in isolation provides a reasonable model of overall energy consumption within the application as a whole.
+    Since our application likely performs _multiple_&thinsp; activities at _different_&thinsp; rates, a simple sum of **J/day** results derived from benchmarking each activity in isolation provides a reasonable model of overall energy consumption within the application as a whole.
 
 Knowing **J/day**, we'll calculate our final **EM&bull;erald** score using a constant which approximates the energy capacity of a standard CR2032 coin-cell battery:
 
