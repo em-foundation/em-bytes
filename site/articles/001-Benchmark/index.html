@@ -12,6 +12,8 @@
         <link rel="prev" href="../..">
       
       
+        <link rel="next" href="../002-BlueJoule/">
+      
       
       <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.41">
@@ -371,6 +373,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../002-BlueJoule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -492,7 +515,7 @@
 <p class="admonition-title">On a personal note</p>
 <p>Back in the day, I never really worried about <em>minimizing</em>&thinsp; system power consumption when developing embedded application software.&thinsp; Instead, we fixated on <em>maximizing</em>&thinsp; processor utilization &ndash; using every available MIP to continuously perform a multitude of real-time tasks.</p>
 <p>In my mind, the <strong>Texas Instruments MSP430</strong> (announced in the 1990s) set the performance standard for the <em>ultra-low-power</em>&thinsp; microcontroller as we know it today.&thinsp; If nothing else, the MSP430 stands alone as the first MCU to use items from your <a href="https://www.youtube.com/watch?v=nPZISRQAQpw">fridge</a> as a power source.</p>
-<p>As a software developer, the rules of the game have now changed &ndash; to one in which "doing nothing" for the longest possible time <em>maximizes</em> overall energy efficiency.&thinsp; Yes, we still want to execute code as quickly as possible &ndash; so we can enjoy a "deep-sleep" that much sooner.</p>
+<p>As a SW developer, the rules of the game have changed &ndash; to one in which "doing nothing" for the longest possible time <em>maximizes</em> overall energy efficiency.&thinsp; Yes, we still want to execute code as quickly as possible &ndash; but now to enjoy our "deep-sleep" that much sooner. <img alt="😴" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f634.svg" title=":sleeping:" /></p>
 </div>
 <p><strong>EM&bull;Scope</strong> captures real-time information via a hardware <em>power analyzer</em>&thinsp; connected to your target MCU board as well as your host PC:</p>
 <figure id="fig1">
@@ -528,7 +551,7 @@
 <div class="admonition abstract">
 <p class="admonition-title">Can we harvest our daily energy needs&thinsp;??</p>
 <p>Vendors of energy-harvesting components will commonly characterize their offerings in terms of <strong>J/day</strong> (or <strong>mWh/day</strong>).&thinsp; By making this figure readily available, <strong>EM&bull;Scope</strong> enables us to quickly determinime the viability of a particular solution.</p>
-<p>Since our application performs multiple activities at different rates, a simple sum of <strong>J/day</strong> results derived from benchmarking each activity in isolation provides a reasonable model of overall energy consumption within the application as a whole.</p>
+<p>Since our application likely performs <em>multiple</em>&thinsp; activities at <em>different</em>&thinsp; rates, a simple sum of <strong>J/day</strong> results derived from benchmarking each activity in isolation provides a reasonable model of overall energy consumption within the application as a whole.</p>
 </div>
 <p>Knowing <strong>J/day</strong>, we'll calculate our final <strong>EM&bull;erald</strong> score using a constant which approximates the energy capacity of a standard CR2032 coin-cell battery:</p>
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" />&emsp;EM&bull;eralds &thinsp;=&thinsp; 2400 / (<em>Joules-per-day</em> × 30) &thinsp;=&thinsp; 80 / <em>Joules-per-day</em><br>
