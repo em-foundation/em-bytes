@@ -35,9 +35,9 @@ We'll keep the articles short &ndash; skim them in a minute, digest them in unde
 {[sp,em-float-right][continue reading....](articles/001-Benchmark.md)}
 <br>
 
-## The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action
+## The BlueJoule&trade; benchmark &mdash; EM&bull;Scope in action
 
 --8<-- "articles/002-BlueJoule.md:excerpt"
 
-{[sp,em-float-right][coming soon....](#the-bluejoule-benchmark--emscope-in-action)}
+{[sp,em-float-right][continue reading....](articles/002-BlueJoule.md)}
 <br>
