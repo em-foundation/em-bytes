@@ -18,7 +18,7 @@
     
     
       
-        <title>The BlueJoule™ benchmark – EM•Scope in action - EM•Bytes</title>
+        <title>The BlueJoule™ benchmark — EM•Scope in action - EM•Bytes</title>
       
     
     
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action
+              The BlueJoule&trade; benchmark &mdash; EM&bull;Scope in action
             
           </span>
         </div>
@@ -315,7 +315,7 @@
           
   
   <span class="md-ellipsis">
-    The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action
+    The BlueJoule&trade; benchmark &mdash; EM&bull;Scope in action
   </span>
   
 
@@ -326,7 +326,7 @@
         
   
   <span class="md-ellipsis">
-    The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action
+    The BlueJoule&trade; benchmark &mdash; EM&bull;Scope in action
   </span>
   
 
@@ -348,9 +348,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-basic-ble-benchmark" class="md-nav__link">
+  <a href="#why-we-need-a-benchmark" class="md-nav__link">
     <span class="md-ellipsis">
-      A basic BLE benchmark
+      Why we need a benchmark
     </span>
   </a>
   
@@ -366,18 +366,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-do-these-scores-mean" class="md-nav__link">
+  <a href="#mining-the-emeralds" class="md-nav__link">
     <span class="md-ellipsis">
-      What do these scores mean
+      Mining the EM&bull;eralds
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contributing-to-the-cause" class="md-nav__link">
+  <a href="#helping-the-cause" class="md-nav__link">
     <span class="md-ellipsis">
-      Contributing to the cause
+      Helping the cause
     </span>
   </a>
   
@@ -426,9 +426,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-basic-ble-benchmark" class="md-nav__link">
+  <a href="#why-we-need-a-benchmark" class="md-nav__link">
     <span class="md-ellipsis">
-      A basic BLE benchmark
+      Why we need a benchmark
     </span>
   </a>
   
@@ -444,18 +444,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-do-these-scores-mean" class="md-nav__link">
+  <a href="#mining-the-emeralds" class="md-nav__link">
     <span class="md-ellipsis">
-      What do these scores mean
+      Mining the EM&bull;eralds
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contributing-to-the-cause" class="md-nav__link">
+  <a href="#helping-the-cause" class="md-nav__link">
     <span class="md-ellipsis">
-      Contributing to the cause
+      Helping the cause
     </span>
   </a>
   
@@ -476,16 +476,150 @@
                   
 
 
-<h1 id="the-bluejoule-benchmark-emscope-in-action">The BlueJoule&trade; benchmark &ndash; EM&bull;Scope in action</h1>
+<h1 id="the-bluejoule-benchmark-emscope-in-action">The BlueJoule&trade; benchmark &mdash; EM&bull;Scope in action</h1>
 <!-- --8<-- [start:excerpt] -->
 
+<div class="article-meta">
+<p><img alt="📆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c6.svg" title=":calendar:" /> October 29, 2025&thinsp; · <img alt="⏱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/23f1.svg" title=":stopwatch:" /> 6 min read</p>
+</div>
 <p>A basic <strong>Bluetooth Low Energy</strong> beacon &ndash; continually advertising the same packet on multiple channels &ndash; serves as the "Hello World" of <strong>BLE</strong> applications.&thinsp; So let's see what we might learn by using <strong>EM&bull;Scope</strong> to measure and compare a representative set of <strong>BLE</strong> HW/SW platforms.</p>
 <!-- --8<-- [end:excerpt] -->
 
-<h2 id="a-basic-ble-benchmark">A basic BLE benchmark</h2>
+<h2 id="why-we-need-a-benchmark">Why we need a benchmark</h2>
+<p><strong>Bluetooth Low Energy</strong> has emerged as pervavsive technology, following its initial availability on the <strong>iPhone 4S</strong> in October 2011.&thinsp; With a multitude of SW stacks now running on dozens of HW platforms, we find the absence of even the most basic BLE benchmark quite telling.</p>
+<p>Promising <em>"5-10 years of operation on coin-cell batteries"</em>, a BLE beacon which adverties a small data packet once-per-second should certainly run for half a decade &ndash; or will it&thinsp;??</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" />&emsp;<strong>MCU vendor data sheet</strong>&thinsp;:&thinsp; 3.0&thinsp;V supply &thinsp;&rarr;&thinsp; 5&thinsp;mA TX current @&thinsp;0&thinsp;dB · 1&thinsp;&mu;A sleep current<br>
+<img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" />&emsp;<strong>Bluetooth 4.0 spec</strong>&thinsp;:&thinsp; 1&thinsp;Mbps data rate · 37 byte packet size · 3 advertising channels<br>
+<img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" />&emsp;<strong>Average current consumption</strong>&thinsp;:&thinsp;  &thinsp;&approx; (&thinsp;0.005<sub><i>radio</i></sub>&nbsp; + &thinsp;0.001<sub><i>sleep</i></sub>&thinsp;) mA<br>
+<img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" />&emsp;<strong>CR2032 coin-cell lifetime</strong>&thinsp;:&thinsp; 225&thinsp;mAh ÷ 0.006&thinsp;mA = 37,500&thinsp;h &approx; 4.3&thinsp;years</p>
+<p>Well, we almost made it to five years &ndash; but in reality, this system would likely run for only half that time.&thinsp; Why &ndash; because our paper model hasn't accounted for the <em>extra</em>&thinsp; power consumed when awakening the MCU from deep-sleep as well as executing the BLE stack code itself.</p>
+<div class="admonition eighth">
+<p class="admonition-title">On a personal note</p>
+<p>I co-founded a BLE software and system design house in early 2011, working closely with Texas Instruments and others as well as stack vendors supporting these platforms.</p>
+<p>Lacking funds for a $10,000 power analyzer, we instead relied upon our multimeter and oscilloscope to give us (crude) visibility into HW/SW power consumption over time.</p>
+<p>Today, however, we can purchase a laboratory-grade power analyzer from  <a href="https://www.joulescope.com/products/js220-joulescope-precision-energy-analyzer">JouleScope</a> for 10× less the cost as well an entry-level analyzer from <a href="https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2">Nordic</a> for 100× less the cost.</p>
+</div>
+<p>With power analyzers now available for any budget, let's use their capabilities to explicitly measure the overall energy consumption of a basic BLE beacon &ndash; gaining a system-level perspective on the interaction of the underlying HW/SW elements over time.</p>
+<div class="admonition bulb">
+<p class="admonition-title">But wait there's more....</p>
+<p>By having different BLE HW/SW platforms implement the <em>same</em> benchmark application, we can quantitatively score their "low-energy" claims and then rank their overall efficiency.</p>
+<p>A true "apples-to-apples" comparision &ndash; or should we say "blueberries-to-blueberries".&thinsp; <img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f609.svg" title=":wink:" /></p>
+</div>
 <h2 id="bringing-emscope-to-bear">Bringing <strong>EM&bull;Scope</strong> to bear</h2>
-<h2 id="what-do-these-scores-mean">What do these scores mean</h2>
-<h2 id="contributing-to-the-cause">Contributing to the cause</h2>
+<p>We've introduced <strong>EM&bull;Scope</strong> in an earlier <a href="../001-Benchmark/">article</a> &ndash; and already previewed some results found in the <a href="https://github.com/em-foundation/BlueJoule">em-foundation/BlueJoule</a> repository housed on <strong>GitHub</strong>.&thinsp; Time now for a deeper-dive.</p>
+<p>Consistent with the <strong>EM&bull;Scope</strong> methodology, the <strong>BlueJoule</strong> benchmark requires the platform-under-test to advertise 19-bytes of payload on all three BLE advertising channels once-per-second.&thinsp; Refer to this section of the <strong>BlueJoule</strong> <a href="https://github.com/em-foundation/BlueJoule/blob/main/docs/ReadMore.md#application">ReadMore</a> for more details.</p>
+<p>We continue to benchmark a growing catalog of popular BLE devices:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Analog Devices MAX32655<a href="https://www.analog.com/en/products/max32655.html"></a></td>
+<td style="text-align: left;">100 MHz ARM Cortex-M4 &thinsp;&#8226;&thinsp; 512 KB flash &thinsp;&#8226;&thinsp; 128 KB SRAM</td>
+</tr>
+<tr>
+<td style="text-align: left;">EM Microelectronic EM9305<a href="https://www.emmicroelectronic.com/product/standard-protocols/em-bleu-em9305"></a></td>
+<td style="text-align: left;">48 MHz ARC EM7D &thinsp;&#8226;&thinsp; 512 KB flash &thinsp;&#8226;&thinsp; 64 KB SRAM</td>
+</tr>
+<tr>
+<td style="text-align: left;">InPlay IN100<a href="https://inplay-tech.com/in100"></a></td>
+<td style="text-align: left;">BLE beacon ASIC &thinsp;&#8226;&thinsp; no-code configuration</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nordic nRF52832<a href="https://www.nordicsemi.com/Products/nRF52832"></a></td>
+<td style="text-align: left;">64 MHz ARM Cortex-M4 &thinsp;&#8226;&thinsp; 512 KB flash &thinsp;&#8226;&thinsp; 64 KB SRAM</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nordic nRF54L15<a href="https://www.nordicsemi.com/Products/nRF54L15"></a></td>
+<td style="text-align: left;">128 MHz ARM Cortex-M33 &thinsp;&#8226;&thinsp; 1.5 MB flash &thinsp;&#8226;&thinsp; 256 KB SRAM</td>
+</tr>
+<tr>
+<td style="text-align: left;">Silicon Labs EFR32xG22E<a href="https://www.silabs.com/wireless/bluetooth/efr32bg22-series-2-socs"></a></td>
+<td style="text-align: left;">76.8 MHz ARM Cortex-M33 &thinsp;&#8226;&thinsp; 512 KB flash &thinsp;&#8226;&thinsp; 32 KB SRAM</td>
+</tr>
+<tr>
+<td style="text-align: left;">Texas Instruments CC2340R5<a href="https://www.ti.com/product/CC2340R5"></a></td>
+<td style="text-align: left;">48 MHz ARM Cortex-M0+ &thinsp;&#8226;&thinsp; 512 KB flash &thinsp;&#8226;&thinsp; 64 KB SRAM</td>
+</tr>
+</tbody>
+</table>
+<p>Using a <strong>JS220</strong> or <strong>PPK2</strong> analyzer, we powered each HW/SW configuration at an "optimal" input voltage when capturing data using <strong>EM&bull;Scope</strong>.&thinsp; We've also recorded captures for most configurations at a "standard" voltage &thinsp;&ge;&thinsp; 3V0.</p>
+<p><a name="voltages"></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Input voltages</p>
+<p>The BLE devices in our catalog invariably target systems powered by batteries or harvested energy.&thinsp; Arguably, we should benchmark each configuration at 3V0 and 1V5 &ndash; reflecting the nominal voltage sourced by standard batteries.</p>
+<p>Some BLE devices already integrate a DC/DC converter to buck&thinsp;·&thinsp;boost the source voltage to an appropriate internal level.&thinsp; In other situations, the device may require an external <em>power-management</em>&thinsp; IC to handle a 3V0 or 1V5 input source.</p>
+<p>This approach further reinforces our belief that improving energy efficiency within resource-constrained embedded systems requires a holistic perspective.&thinsp; All the more power &ndash; or "all the less energy" &ndash; to those devices which can operate directly from a 1V5 input voltage.</p>
+</div>
+<p>In a number of instances, we've also benchmarked the <em>same</em>&thinsp; hardware platform executing <em>different</em>&thinsp; software stacks &ndash; with some notable differences, as we'll highlight later.</p>
+<p>You'll find the latest set of benchmark scores in this section of the <strong>BlueJoule</strong> <a href="https://github.com/em-foundation/BlueJoule/blob/main/docs/ReadMore.md#scores">ReadMore</a>.</p>
+<h2 id="mining-the-emeralds">Mining the <strong>EM&bull;eralds</strong></h2>
+<p>Lots of numbers here &nbsp;<img alt="🤯" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f92f.svg" title=":exploding_head:" />&nbsp; so let's break down the results:&nbsp;  An earlier <a href="../001-Benchmark/#quantifying-energy-efficiency">article</a>  introduced the <strong>EM&bull;erald</strong> as a measure of energy efficiency.&thinsp; Suffice it to say, one <strong>EM&bull;erald</strong> approximates one month of execution on a CR2032 coin-cell battery &ndash; higher score, greater efficiency.</p>
+<p class="annotate">We'll now focus on a handful of <a href="https://github.com/em-foundation/BlueJoule/blob/main/docs/ReadMore.md#js220-scores">JS220 Capture</a> scores, recorded at 3V0 using our high-precision <strong>JouleScope</strong> analyzer (sampling at 2&thinsp;MHz).(1) While not necessarily their best scores, these 3V0 captures allow us to check our measurements against vendor datasheets.</p>
+<ol>
+<li>You'll also find <a href="https://github.com/em-foundation/BlueJoule/blob/main/docs/ReadMore.md#ppk2-scores">PPK2 Capture</a> scores, recorded at 100&thinsp;kHz using the <strong>Nordic</strong> analyzer.</li>
+</ol>
+<p>Let's begin with the <strong>Texas Instruments CC2340R5&thinsp;·&thinsp;SimpleLink SDK&thinsp;·&thinsp;3V0</strong> configuration &ndash; labeled <code>ti-23-lp/simplelink-3V0</code> and scoring 28.74 <strong>EM&bull;eralds</strong> for the 1&thinsp;s event period.&thinsp; A file named <a href="https://github.com/biosbob/BlueJoule/blob/main/captures/js220/ti-23-lp/simplelink-3V0/ABOUT.md"><code>ABOUT.md</code></a> delivered with each capture contains the next level of benchmark results.</p>
+<div class="admonition hint">
+<p class="admonition-title">Tip</p>
+<p>Links within the <a href="https://github.com/em-foundation/BlueJoule/blob/main/docs/ReadMore.md#catalog">BlueJoule</a>&thinsp; <strong>Catalog</strong> and <strong>Capture</strong> tables will take you inside the corresponding <code>About.md</code> file for a particular HW/SW configuration.</p>
+</div>
+<p>In addition to more detailed power metrics for active execution as well as "deep-sleep", each <a href="https://github.com/biosbob/BlueJoule/blob/main/captures/js220/ti-23-lp/simplelink-3V0/ABOUT.md"><code>ABOUT.md</code></a>&thinsp; file features a screenshot depicting power consumption over time within a typical BLE advertising event.</p>
+<p>So let's now compare the <strong>Texas Instruments</strong> results with scores captured on com&shy;petitive devices from <strong>Nordic</strong> <a href="https://github.com/biosbob/BlueJoule/blob/main/captures/js220/nrf-54-dk/zephyr-3V0/ABOUT.md"><code>nrf-54-dk/zephyr-3V0</code></a>&thinsp; and <strong>Silicon Labs</strong> <a href="https://github.com/biosbob/BlueJoule/blob/main/captures/js220/sil-g22-ehk/rail-3V0/ABOUT.md"><code>sil-g22-ehk/rail-3V0</code></a> :</p>
+<figure id="fig1">
+<p><a class="glightbox" href="/assets/fig-002-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="/assets/fig-002-1.png" width="900"></a></p>
+<figcaption>Texas Instruments CC2340R5 · SimpleLink SDK · 3V0
+</figcaption>
+</figure>
+<figure id="fig2">
+<p><a class="glightbox" href="/assets/fig-002-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="/assets/fig-002-2.png" width="900"></a></p>
+<figcaption>Nordic nRF54L15 · Zephyr OS · 3V0
+</figcaption>
+</figure>
+<figure id="fig1">
+<p><a class="glightbox" href="/assets/fig-002-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="/assets/fig-002-3.png" width="900"></a></p>
+<figcaption>SiLabs EFR32xG22E · Simplicity (RAIL) · 3V0
+</figcaption>
+</figure>
+<p>Right away, we see differences in power consumption when actively transmitting the same 19-bytes packet on all three BLE advertising channels.&thinsp; At almost 17&thinsp;mW, this leaves <strong>Texas Instruments</strong> at a slight disadvantage against <strong>Nordic</strong> [&approx; 15&thinsp;mW] and <strong>Silicon Labs</strong> [&approx; 16&thinsp;mW].</p>
+<p>But standing back and looking at the advertising event as a whole, other factors can contribute to the <em>total</em>&thinsp; amount of power consumed over this period of time:</p>
+<p><img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; the time for the HW to transition from "sleep" to "active" mode<br>
+<img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; the time waiting for a high-frequency radio crystal to stabilize<br>
+<img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; the time initializing the BLE stack and preparing the radio<br>
+<img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; the time in transition between one packet and the next<br>
+<img alt="🟦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f7e6.svg" title=":blue_square:" /> &ensp; the time to shutdown the stack and re-enter "sleep"</p>
+<p>Each of the HW/SW platforms benchmarked here has its own strengths and weaknesses in these areas.&thinsp; And since packet transmission often accounts for &lt;&thinsp;50% of the total power consumed when active, this "overhead" requires further sruntity in our hunt for more <strong>EM&bull;eralds</strong>.</p>
+<p>Last but not least, let's understand the impact of average sleep current on overall energy efficiency.&thinsp; The notable gap between <strong>Texas Instruments</strong> [0.5&thinsp;&mu;A] and <strong>Nordic</strong> [2.8&thinsp;&mu;A] will clearly help the former and hurt the latter in this sort of benchmark.</p>
+<p>Sleep current in fact dominates as we <em>increase</em>&thinsp; our event period from one-second to ten-seconds.&thinsp; After measuring sleep current as well as energy consumption of a typical event, <strong>EM&bull;Scope</strong> can extrapolate <strong>EM&bull;erald</strong> scores for <em>any</em>&thinsp; period of interest to our application.</p>
+<div class="admonition eighth">
+<p class="admonition-title">On a personal note</p>
+<p>In some configurations, I've replaced the BLE stack supplied by the silicon vendor with one of my own design written in <a href="https://docs.emscript.openem.org">EM&bull;Script</a> &ndash; a novel programming platform which targets resource-constrained MCUs.</p>
+<p>By optimizing both code size and execution time, we can potentially <em>improve</em>&thinsp; overall energy efficiency.&thinsp; <strong>EM&bull;erald</strong> scores of 52.91 and 316.70 turned in by the <a href="https://github.com/em-foundation/BlueJoule/blob/main/captures/ppk2/ti-23-lp/emscript-2V2/ABOUT.md"><code>ti-23-lp/emscript-2V2</code></a> capture should peak your interest &ndash; and will receive more attention in future articles.</p>
+</div>
+<h2 id="helping-the-cause">Helping the cause</h2>
+<p>If nothing else, <strong>BlueJoule</strong> fills a void in the industry &ndash; not only by streamlining comparision of one "ultra-low-power" BLE device against another, but also by giving us greater insight into <em>how</em>&thinsp; these devices consume energy when executing an application workload in real-time.</p>
+<p>To engage at the next level, the <strong>EM&bull;Scope</strong> <a href="https://github.com/em-foundation/emscope/blob/docs-stable/docs/ReadMore.md#installation">ReadMore</a> shows you how to install and use this open-source tool &ndash; drawing on our <code>ti-23-lp/simplelink-3V0</code> capture as a working example.</p>
+<div class="admonition bulb">
+<p class="admonition-title">... and you don't need a power analyzer to start exploring the benchmark results !!!</p>
+</div>
+<p>The <strong>BlueJoule</strong> <a href="https://github.com/em-foundation/BlueJoule/blob/main/docs/ReadMore.md#contributing">ReadMore</a> provides additional information for anyone wishing to submit a <em>new</em>&thinsp; capture using <strong>EM&bull;Scope</strong> in conjunction with a <strong>JS220</strong> or <strong>PPK2</strong> analyzer.</p>
+<p>But above all, we need input from the BLE device vendors publicized by our efforts:</p>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> &ensp; is <strong>BlueJoule</strong> a meaningful benchmark<br>
+<img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> &ensp; have we measured your device fairly<br>
+<img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> &ensp; are there other devices of interest<br>
+<img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> &ensp; how do we best interact with you</p>
+<p>Ideally, each vendor would deliver optimized <code>bluejoule</code> SDK projects targeting specific BLE devices within their silicon portfolio &ndash; not unlike the ever-present <code>coremark</code> projects we find.</p>
+<div class="admonition eighth">
+<p class="admonition-title">On a personal note</p>
+<p>Having prepared most of the software used in the current <strong>BlueJoule</strong> catalog, I can honestly attest to the relative difficultly of this task &ndash; given that an energy-efficient periodic advertising example should seemingly serve as the "hello world" of BLE.</p>
+<p>I often found myself dissecting sophisticated, generalized applications to finally arrive at an elementary embodiment of the BLE broadcast role.&thinsp; More important, I sometimes had to <em>add</em>&thinsp; instructions to ensure the application  enters the lowest-power sleep mode.</p>
+<p>As a multi-decade veteren of this industry, I understand the challenges silicon vendors can face &ndash; and would therefore offer to work with y'all in making <strong>BlueJoule</strong> a reality.</p>
+</div>
+<p><span class="em-float-right">Happy coding&thinsp;!!! &ensp; <img alt="🌝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f31d.svg" title=":full_moon_with_face:" />&nbsp;&nbsp;&nbsp;<img alt="💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4bb.svg" title=":computer:" /></span></p>
 
 
 
