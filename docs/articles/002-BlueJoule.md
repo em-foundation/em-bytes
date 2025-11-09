@@ -79,14 +79,14 @@ We'll now focus on a handful of [JS220 Capture](https://github.com/em-foundation
 1. You'll also find [PPK2 Capture](https://github.com/em-foundation/BlueJoule/blob/main/docs/ReadMore.md#ppk2-scores) scores, recorded at 100&thinsp;kHz using the **Nordic** analyzer.
 
 
- Let's begin with the **Texas Instruments CC2340R5&thinsp;·&thinsp;SimpleLink SDK&thinsp;·&thinsp;3V0** configuration &ndash; labeled `ti-23-lp/simplelink-3V0` and scoring 28.74 **EM&bull;eralds** for the 1&thinsp;s event period.&thinsp; A file named [`ABOUT.md`](https://github.com/biosbob/BlueJoule/blob/main/captures/js220/ti-23-lp/simplelink-3V0/ABOUT.md) delivered with each capture contains the next level of benchmark results.
+ Let's begin with the **Texas Instruments CC2340R5&thinsp;·&thinsp;SimpleLink SDK&thinsp;·&thinsp;3V0** configuration &ndash; labeled `ti-23-lp/simplelink-3V0` and scoring 28.74 **EM&bull;eralds** for the 1&thinsp;s event period.&thinsp; A file named [`ABOUT.md`](https://github.com/em-foundation/BlueJoule/blob/main/captures/ti-23-lp/simplelink-3V0-J/ABOUT.md) delivered with each capture contains the next level of benchmark results.
 
 !!! Hint "Tip"
     Links within the [BlueJoule](https://github.com/em-foundation/BlueJoule/blob/main/docs/ReadMore.md#catalog)&thinsp; **Catalog** and **Capture** tables will take you inside the corresponding `About.md` file for a particular HW/SW configuration.
 
-In addition to more detailed power metrics for active execution as well as "deep-sleep", each [`ABOUT.md`](https://github.com/biosbob/BlueJoule/blob/main/captures/js220/ti-23-lp/simplelink-3V0/ABOUT.md)&thinsp; file features a screenshot depicting power consumption over time within a typical BLE advertising event.
+In addition to more detailed power metrics for active execution as well as "deep-sleep", each [`ABOUT.md`](https://github.com/em-foundation/BlueJoule/blob/main/captures/ti-23-lp/simplelink-3V0-J/ABOUT.md#typical-event)&thinsp; file features a screenshot depicting power consumption over time within a typical BLE advertising event.
 
-So let's now compare the **Texas Instruments** results with scores captured on com&shy;petitive devices from **Nordic** [`nrf-54-dk/zephyr-3V0`](https://github.com/biosbob/BlueJoule/blob/main/captures/js220/nrf-54-dk/zephyr-3V0/ABOUT.md)&thinsp; and **Silicon Labs** [`sil-g22-ehk/rail-3V0`](https://github.com/biosbob/BlueJoule/blob/main/captures/js220/sil-g22-ehk/rail-3V0/ABOUT.md) :
+So let's now compare the **Texas Instruments** results with scores captured on com&shy;petitive devices from **Nordic** [`nrf-54-dk/zephyr-3V0`](https://github.com/em-foundation/BlueJoule/blob/main/captures/nrf-54-dk/zephyr-3V0-J/ABOUT.md)&thinsp; and **Silicon Labs** [`sil-g22e-ehk/rail-3V0`](https://github.com/em-foundation/BlueJoule/blob/main/captures/sil-g22e-ehk/rail-3V0-J/ABOUT.md) :
 
 <figure markdown id="fig1">
 <img src="/assets/fig-002-1.png" width="900">
@@ -122,7 +122,7 @@ Sleep current in fact dominates as we _increase_&thinsp; our event period from o
 !!! eighth "On a personal note"
     In some configurations, I've replaced the BLE stack supplied by the silicon vendor with one of my own design written in [EM&bull;Script](https://docs.emscript.openem.org) &ndash; a novel programming platform which targets resource-constrained MCUs.
 
-    By optimizing both code size and execution time, we can potentially _improve_&thinsp; overall energy efficiency.&thinsp; **EM&bull;erald** scores of 52.91 and 316.70 turned in by the [`ti-23-lp/emscript-2V2`](https://github.com/em-foundation/BlueJoule/blob/main/captures/ppk2/ti-23-lp/emscript-2V2/ABOUT.md) capture should peak your interest &ndash; and will receive more attention in future articles.
+    By optimizing both code size and execution time, we can potentially _improve_&thinsp; overall energy efficiency.&thinsp; **EM&bull;erald** scores of 43.12 and 280.50 turned in by this [`ti-23-lp/emscript-2V2`](https://github.com/em-foundation/BlueJoule/blob/main/captures/ti-23-lp/emscript-2V2-J/ABOUT.md) capture should peak your interest &ndash; and will receive more attention in future articles.
 
 ## Helping the cause
 
